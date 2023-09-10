@@ -7,32 +7,33 @@
 
     <body>
 
-        <h1 align="center"><font color="#00CCFF" face="Times New Romane">Task 1</font></h1>
+        <h1 align="center" style="color:cadetblue">Task 1</font></h1>
 
         <ul>
-            <li><a href="http://kubsu.ru/">Кубанский государственный университет</a></li>
-            <li><a href="https://kubsu.ru/">Кубанский государственный университет</a></li>
-            <li><a href="http://kubsu.ru/"title="Официальный сайт Кубанского государственного университета"><img src="Кубгу.jpg" width="350" height="300" alt="Кубанский государственный университет"></a></li>
-            <li><a href="/form.html">Form</a></li>
-            <li><a href="/index.html">Main page</a></li>
-            <li><a href="#meow">Meow</a></li>
-            <li><a href="https://vk.com/im?sel=c198&w=historyc198_photo&elf=c382">Link with 3 parameters</a></li>
-            <li><a href="https://example.com?id=element">Link with id parameter</a></li>
-            <li><a href="./meow.html">Page in the current directory</a></li>
-            <li><a href="./about/about.html">Page in the catalog about</a></li>
-            <li><a href="../something">The page is a level higher</a></li>
-            <li><a href="../../something">The page is 2 levels higher</a></li>
+            <li><a href="http://kubsu.ru/" title="Кубанский государственный университет">Aбсолютная гиперссылка на главную страницу сайта kubsu.ru</a></li>
+            <li><a href="https://kubsu.ru/" title="Кубанский государственный университет">Абсолютная на главную сайта kubsu.ru в протоколе https</a></li>
+            <li><a href="http://kubsu.ru/" title="Официальный сайт Кубанского государственного университета">
+              <img src="Кубгу.jpg" style="width:400px; height:300px" alt="Кубанский государственный университет"></a></li>
+            <li><a href="/form.html">Сокращенная ссылка на внутреннюю страницу</a></li>
+            <li><a href="/index.html">Сокращенная ссылка на главную страницу</a></li>
+            <li><a href="#meow">Ссылка на фрагмент текущей страницы</a></li>
+            <li><a href="https://vk.com/im?sel=c198&w=historyc198_photo&elf=c382">Ссылка с тремя параметрами в URL</a></li>
+            <li><a href="https://example.com?id=element">Ссылка с параметром id в URL</a></li>
+            <li><a href="./meow.html">Относительная на страницу в текущем каталоге</a></li>
+            <li><a href="./about/about.html">Относительная на страницу в каталоге about</a></li>
+            <li><a href="../something">Относительная на страницу в каталоге уровнем выше текущего</a></li>
+            <li><a href="../../something">Относительная на страницу в каталоге двумя уровнями выше</a></li>
             <li><p> Meow meow meow meow. Meow meow meow, <a href="./meow.html">meow</a> meow meow meow.</p></li>
-            <li><a href="http://example.com#element_id">Meow</a></li>
+            <li><a href="http://example.com#element_id">Ссылка на фрагмент страницы стороннего сайта</a></li>
             <li>
                 <map name="box">
-                <area shape="rect" coords="180,0,0,80" href="form.html">
-                <area shape="circle" coords="100,150,70" href="meow.html" alt="Подсказка">
+                <area shape="rect" coords="180,0,0,80" href="form.html" title="Button 1">
+                <area shape="circle" coords="100,150,70" href="meow.html" title="Button 2">
             </map> 
-            <img src="Кнопки.jpg" width="200" height="200" usemap="#box">
+            <img src="Кнопки.jpg" style="width:200px; height:200px" usemap="#box">
         </li>
-        <li><a href="">Main</a></li>
-        <li><a>Main</a></li>
+        <li><a href="">Ссылка с пустым href</a></li>
+        <li><a>Ссылка без href</a></li>
         <li><a href="http://example.com/" rel=“nofollow”>Ссылка, по которой запрещен переход поисковикам</a></li>
         <li><!--noindex--><a href="http://example.com/page" meta name="robots.txt" content=“noindex”>Ссылка, запрещенная для индексации поисковиками</a><!--/noindex--></li>
         <li><a><ol>
@@ -42,6 +43,8 @@
           </ol></a></li>
         <li><a href="ftp://user:pass123@example.com/Temp">Ссылка на файл на сервере FTP с авторизацией</a></li>
         </ul>
+
+        <h1 align="center" style="color:cadetblue">Form</h1>
 
         <form action="/"
         method="POST">
