@@ -2,6 +2,8 @@
 <html lang="ru">
 
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Task 1</title>
     </head>
 
@@ -21,8 +23,8 @@
             <li><a href="https://example.com?id=element">Ссылка с параметром id в URL</a></li>
             <li><a href="./meow.html">Относительная на страницу в текущем каталоге</a></li>
             <li><a href="./about/about.html">Относительная на страницу в каталоге about</a></li>
-            <li><a href="../something">Относительная на страницу в каталоге уровнем выше текущего</a></li>
-            <li><a href="../../something">Относительная на страницу в каталоге двумя уровнями выше</a></li>
+            <li><a href="../something.html">Относительная на страницу в каталоге уровнем выше текущего</a></li>
+            <li><a href="../../something.html">Относительная на страницу в каталоге двумя уровнями выше</a></li>
             <li><p> Meow meow meow meow. Meow meow meow, <a href="./meow.html">meow</a> meow meow meow.</p></li>
             <li><a href="http://example.com#element_id">Ссылка на фрагмент страницы стороннего сайта</a></li>
             <li>
@@ -35,13 +37,13 @@
         <li><a href="">Ссылка с пустым href</a></li>
         <li><a>Ссылка без href</a></li>
         <li><a href="http://example.com/" rel=“nofollow”>Ссылка, по которой запрещен переход поисковикам</a></li>
-        <li><!--noindex--><a href="http://example.com/page">Ссылка, запрещенная для индексации поисковиками</a><!--/noindex--></li>
+        <li><!--noindex--><a href="http://example.com/temp">Ссылка, запрещенная для индексации поисковиками</a><!--/noindex--></li>
         <li><ol>
             <li><a href="meow.html" title="first-link">1 ссылка с подписью title</a></li>
             <li><a  href="form.html" title="second-link">2 ссылка с подписью title</a></li>
             <li><a href="./about/about.html" title="third-link">3 ссылка с подписью title</a></li>
           </ol></li>
-        <li><a href="ftp://user:pass123@example.com/Temp">Ссылка на файл на сервере FTP с авторизацией</a></li>
+        <li><a href="ftp://user:pass123@example.com/Temp.bin">Ссылка на файл на сервере FTP с авторизацией</a></li>
         </ul>
 
         <h1 style="color:cadetblue; text-align: center">Form</h1>
@@ -89,7 +91,7 @@
           Любимый язык программирования:
           <br>
           <select name="select" multiple>
-            <option value="Значение1" selected="selected">Pascal</option>
+            <option value="Значение1">Pascal</option>
             <option value="Значение2" selected="selected">C++</option>
             <option value="Значение3" selected="selected">C</option>
             <option value="Значение4" selected="selected">JavaScript</option>
