@@ -78,10 +78,12 @@ table {
 .odd{
     background:  radial-gradient(farthest-corner at 50% 50%, #DCECF8, #c1e3fd);
 }
+
   form{
     margin: 0 auto;
     max-width:960px;
 }
+
 footer {
     margin:0;
     background-color: #f2f2f2;
