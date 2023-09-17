@@ -57,7 +57,7 @@ table {
     text-align: center;
     margin: 0 auto;
     max-width:960px;
-    background:  radial-gradient(farthest-corner at 50% 50%, #d0eaff, #DCECF8);
+    
   }
 
   th {
@@ -71,6 +71,13 @@ table {
     border: 1px solid rgb(223, 253, 255);
 }
 
+.even{
+    background:  radial-gradient(farthest-corner at 50% 50%, white, #DCECF8);
+}
+
+.odd{
+    background:  radial-gradient(farthest-corner at 50% 50%, #DCECF8, #c1e3fd);
+}
   form{
     margin: 0 auto;
     max-width:960px;
