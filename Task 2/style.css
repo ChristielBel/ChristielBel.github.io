@@ -27,6 +27,12 @@ h2{
     text-align: center;
 }
 
+p{
+    text-indent: 25px;
+    margin: 0 auto;
+    max-width:960px;
+}
+
 div{ 
     position: absolute;
     display: inline-block;
@@ -52,12 +58,15 @@ div{
     margin: 0 auto;
 }
 
+img{
+    width:200px; 
+    height:200px
+}
+
 table {
-    
     text-align: center;
     margin: 0 auto;
     max-width:960px;
-    
   }
 
   th {
@@ -82,6 +91,12 @@ table {
   form{
     margin: 0 auto;
     max-width:960px;
+    text-align: center;
+    justify-content: center;
+}
+
+label{
+    display: block;
 }
 
 footer {
