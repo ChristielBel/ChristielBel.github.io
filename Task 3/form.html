@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+  <head>
+    <title>Пример формы HTML</title>
+  </head>
+
+  <body>
+
+    <h1 style="color:cadetblue; text-align: center">Form</h1>
+
+        <form action="/"
+        method="POST">
+  
+        <label>
+          ФИО:<br>
+          <input name="field-name-1" 
+            type="text"
+            placeholder="Введите ваше ФИО">
+        </label><br>
+  
+        <label>
+          Телефон:<br>
+          <input name="field-name-2" 
+            type="tel" 
+            placeholder="Введите ваш номер телефона">
+        </label><br>
+  
+        <label>
+            Email:<br>
+            <input name="field-email"
+            type="email"
+            placeholder="Введите вашу почту">
+          </label><br>
+
+        <label>
+          Дата рождения:<br>
+          <input name="field-date"
+            value="2023-08-19"
+            type="date">
+        </label><br>
+  
+        Пол:<br>
+        <label><input type="radio" checked="checked"
+          name="radio-group-1" value="Значение1">
+          Мужской</label>
+        <label><input type="radio"
+          name="radio-group-1" value="Значение2">
+          Женский</label><br>
+
+        <label>
+          Любимый язык программирования:
+          <br>
+          <select name="select" multiple>
+            <option value="Значение1">Pascal</option>
+            <option value="Значение2" selected="selected">C++</option>
+            <option value="Значение3" selected="selected">C</option>
+            <option value="Значение4" selected="selected">JavaScript</option>
+            <option value="Значение5" selected="selected">PHP</option>
+            <option value="Значение6" selected="selected">Python</option>
+            <option value="Значение7" selected="selected">Java</option>
+            <option value="Значение8" selected="selected">Haskel</option>
+            <option value="Значение9" selected="selected">Clojure</option>
+            <option value="Значение10" selected="selected">Prolog</option>
+            <option value="Значение11" selected="selected">Scala</option>
+          </select>
+        </label><br>
+
+        <label>
+            Биография:<br>
+            <textarea name="field-name-4"></textarea>
+          </label><br>
+  
+        <br>
+        <label><input type="checkbox" checked="checked"
+          name="check-1">
+          C контрактом ознакомлен (а)</label><br>
+  
+        <input type="submit" value="Сохранить">
+      </form>
+
+  </body>
+
+</html> 
