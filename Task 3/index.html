@@ -1,1 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+    
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta charset="UTF-8">
+        <title>Enchanted Cup</title>
+    </head>
 
+    <body>
+
+      <header>
+        <img class="logo" src="лого.png" alt="лого"/>
+        <h1>Enchanted Cup</h1>
+      </header>
+
+      <nav>
+        <a href="#links" class="nav-button">Links</a>
+        <a href="#table" class="nav-button" >Table</a>
+        <a href="#form" class="nav-button">Form</a>
+        <a href="#footer" class="nav-button">Footer</a>
+      </nav>
+
+      <h2 id="links">Links</h2>
+      <div class="menu">
+        <ul>
+          <li><a href="http://kubsu.ru/" title="Кубанский государственный университет">Aбсолютная гиперссылка на главную страницу сайта kubsu.ru</a></li>
+          <li><a href="https://kubsu.ru/" title="Кубанский государственный университет">Абсолютная на главную сайта kubsu.ru в протоколе https</a></li>
+          <li><a href="http://kubsu.ru/" title="Официальный сайт Кубанского государственного университета">
+            <img src="Кубгу.jpg" alt="Кубанский государственный университет"></a></li>
+          <li><a href="/form.html">Сокращенная ссылка на внутреннюю страницу</a></li>
+          <li><a href="/index.html">Сокращенная ссылка на главную страницу</a></li>
+          <li><a href="#meow">Ссылка на фрагмент текущей страницы</a></li>
+          <li><a href="https://vk.com/im?sel=c198&w=historyc198_photo&elf=c382">Ссылка с тремя параметрами в URL</a></li>
+          <li><a href="https://example.com?id=element">Ссылка с параметром id в URL</a></li>
+          <li><a href="./meow.html">Относительная на страницу в текущем каталоге</a></li>
+          <li><a href="./about/about.html">Относительная на страницу в каталоге about</a></li>
+          <li><a href="../something.html">Относительная на страницу в каталоге уровнем выше текущего</a></li>
+          <li><a href="../../something.html">Относительная на страницу в каталоге двумя уровнями выше</a></li>
+          <li><p> Meow meow meow meow. Meow meow meow, <a href="./meow.html">meow</a> meow meow meow.</p></li>
+          <li><a href="http://example.com#element_id">Ссылка на фрагмент страницы стороннего сайта</a></li>
+          <li>
+              <map name="box">
+              <area shape="rect" coords="0,0,180,80" href="form.html" alt="Button 1">
+              <area shape="circle" coords="100,150,70" href="meow.html" alt="Button 2">
+          </map> 
+          <img src="Кнопки.jpg" usemap="#box" alt="Кнопки">
+      </li>
+      <li><a href="">Ссылка с пустым href</a></li>
+      <li><a>Ссылка без href</a></li>
+      <li><a href="http://example.com/" rel=“nofollow”>Ссылка, по которой запрещен переход поисковикам</a></li>
+      <li><!--noindex--><a href="http://example.com/temp">Ссылка, запрещенная для индексации поисковиками</a><!--/noindex--></li>
+      <li><ol>
+          <li><a href="meow.html" title="first-link">1 ссылка с подписью title</a></li>
+          <li><a  href="form.html" title="second-link">2 ссылка с подписью title</a></li>
+          <li><a href="./about/about.html" title="third-link">3 ссылка с подписью title</a></li>
+        </ol></li>
+      <li><a href="ftp://user:pass123@example.com/Temp.bin">Ссылка на файл на сервере FTP с авторизацией</a></li>
+      </ul>
+    </div>
+      
+    <h2 id="table">Table</h2>
+    <table>
+      <tr class="even">
+        <th rowspan="2">Колонка 1</th>
+        <th colspan="2">Колонка 2</th>
+        <th colspan="2">Колонка 3</th>
+        <th colspan="2">Колонка 4</th>
+      </tr>
+      <tr class="odd">
+        <td>Ячейка 12</td>
+        <td>Ячейка 13</td>
+        <td>Ячейка 14</td>
+        <td>Ячейка 15</td>
+        <td>Ячейка 16</td>
+        <td>Ячейка 17</td>
+      </tr>
+      <tr class="even">
+        <td colspan="3">Ячейка 21</td>
+        <td>Ячейка 24</td>
+        <td>Ячейка 25</td>
+        <td>Ячейка 26</td>
+        <td>Ячейка 27</td>
+      </tr>
+      <tr class="odd">
+        <td>Ячейка 31</td>
+        <td colspan="4">Ячейка 32</td>
+        <td>Ячейка 36</td>
+        <td>Ячейка 37</td>
+      </tr>
+      <tr class="even">
+        <td>Ячейка 41</td>
+        <td>Ячейка 42</td>
+        <td colspan="5">Ячейка 43</td>
+      </tr>
+      <tr class="odd">
+        <td>Ячейка 51</td>
+        <td colspan="6">Ячейка 52</td>
+      </tr>
+      <tr class="even">  
+        <td colspan="7">Ячейка 61</td>
+      </tr>
+    </table>
+
+    <h2 id="form">Form</h2>
+    <form action="/"
+    method="POST">
+
+    <label>
+      ФИО:<br>
+      <input name="field-name-1" 
+        type="text"
+        placeholder="Введите ваше ФИО">
+    </label><br>
+
+    <label>
+      Телефон:<br>
+      <input name="field-name-2" 
+        type="tel" 
+        placeholder="Введите ваш номер телефона">
+    </label><br>
+
+    <label>
+        Email:<br>
+        <input name="field-email"
+        type="email"
+        placeholder="Введите вашу почту">
+      </label><br>
+
+    <label>
+      Дата рождения:<br>
+      <input name="field-date"
+        value="2023-08-19"
+        type="date">
+    </label><br>
+
+    Пол:<br>
+    <label><input type="radio" checked="checked"
+      name="radio-group-1" value="Значение1">
+      Мужской</label>
+    <label><input type="radio"
+      name="radio-group-1" value="Значение2">
+      Женский</label><br>
+
+    <label>
+      Любимый язык программирования:
+      <br>
+      <select name="select" multiple>
+        <option value="Значение1">Pascal</option>
+        <option value="Значение2" selected="selected">C++</option>
+        <option value="Значение3" selected="selected">C</option>
+        <option value="Значение4" selected="selected">JavaScript</option>
+        <option value="Значение5" selected="selected">PHP</option>
+        <option value="Значение6" selected="selected">Python</option>
+        <option value="Значение7" selected="selected">Java</option>
+        <option value="Значение8" selected="selected">Haskel</option>
+        <option value="Значение9" selected="selected">Clojure</option>
+        <option value="Значение10" selected="selected">Prolog</option>
+        <option value="Значение11" selected="selected">Scala</option>
+      </select>
+    </label><br>
+
+    <label>
+        Биография:<br>
+        <textarea name="field-name-4"></textarea>
+      </label><br>
+
+    <br>
+    <label><input type="checkbox" checked="checked"
+      name="check-1">
+      C контрактом ознакомлен (а)</label><br>
+
+    <input type="submit" value="Сохранить">
+  </form>
+
+  <p id="meow" class="meow"> Meow meow meow meow. Meow meow meow, meow meow meow meow. Meow meow meow meow, meow meow. Meow meow meow. Meow meow. Meow meow meow 
+    meow meow meow meow meow meow meow meow.</p>
+  <p class="meow"> Meow meow meow meow. Meow meow meow, meow meow meow meow. Meow meow meow meow, meow meow. Meow meow meow. Meow meow. Meow meow meow meow meow 
+    meow meow meow meow meow meow.
+  Meow meow meow meow. Meow meow meow, meow meow meow meow. Meow meow meow meow, meow meow. Meow meow meow. Meow meow. Meow meow meow meow meow meow meow meow meow meow meow.
+  Meow meow meow meow. Meow meow meow, meow meow meow meow. Meow meow meow meow, meow meow. Meow meow meow. Meow meow. Meow meow meow meow meow meow meow meow meow meow meow.</p>
+
+        <footer id="footer">
+          <p class="footer">&copy; 2023 Беликова Кристина</p>
+      </footer>
+    </body>
+
+</html>
