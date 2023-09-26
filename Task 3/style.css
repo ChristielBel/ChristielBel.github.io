@@ -1,6 +1,7 @@
 body{
     font-style: italic;
     margin: 0;
+    width: 100%;
 }
 
 main{
@@ -37,6 +38,10 @@ h2{
     text-align: center;
 }
 
+p{
+    text-align: center;
+}
+
 nav{ 
     border: 1px solid white;
     /* background-size:100px; */
@@ -57,11 +62,6 @@ nav{
 
 .nav-button:hover {
     background-color: #3c3c5f;
-}
-
-div{
-    max-width:960px; 
-    margin: 0 ;
 }
 
 img{
@@ -98,7 +98,6 @@ table {
 
   form{
     margin: 0 auto;
-    max-width:960px;
     text-align: center;
     justify-content: center;
 }
