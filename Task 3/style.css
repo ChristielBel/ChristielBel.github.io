@@ -6,6 +6,8 @@ body{
 }
 
 header {
+    margin: 0;
+    order:1;
     display: flex;
     width: 100%;
     height: 150px;
@@ -39,6 +41,11 @@ p{
     text-align: center;
 }
 
+img{
+    width:200px; 
+    height:200px
+}
+
 nav{ 
     border: 1px solid white;
     background-color: #383858;
@@ -59,42 +66,33 @@ nav{
     background-color: #3c3c5f;
 }
 
-img{
-    width:200px; 
-    height:200px
-}
-
-div {
+.content{
     display: flex;
+    width: 100%;
+    flex-direction: column;
 }
 
 .table{
-    flex: 1;
-    order:1;
-    display: grid;
-}
-
-.menu{
-    display: grid;
-    flex: 3;
-    order: 2;
-    justify-content: center;
+    order:2;
 }
 
 table { 
-    justify-content: center;
+    order:3;
+    display: table;
+    width: 100%;
+    display: block;
     overflow-x: auto;
     white-space: nowrap;
     text-align: center;
     margin: 0 auto;
-  }
+}
 
-  th {
+th {
     padding: 10px; 
     border: 1px solid rgb(223, 253, 255);
 }
 
-  td {
+td {
     font-size: 0.8em;
     padding: 5px 7px;
     border: 1px solid rgb(223, 253, 255);
@@ -108,17 +106,37 @@ table {
     background:  radial-gradient(farthest-corner at 50% 50%, #DCECF8, #c1e3fd);
 }
 
+.link{
+    order:4;
+}
+
+.menu{
+    order:5;
+    margin: 0 auto; 
+    justify-content: center;
+}
+
+.form{
+    order:6;
+}
+
 form{
+    order:6;
     margin: 0 auto;
     text-align: center;
     justify-content: center;
 }
 
-label{
-    display: block;
+.text{
+    order:7;
+}
+
+.meow{
+    order:8;
 }
 
 footer {
+    order:9;
     width: 100%;
     margin:0;
     background-color: #f2f2f2;
@@ -131,12 +149,14 @@ footer {
 
 
 @media screen and (min-width: 800px){
+
     body{
         margin:0;
         font-style: italic;
     }
 
     header {
+        order:1;
         width: 100%;
         background-color:#383858;
         height:160px;
@@ -159,14 +179,17 @@ footer {
         text-align: center;
     }
 
-    p{text-align: left;}
+    p{
+        text-align: left;
+    }
 
-    .meow {
-        margin: 0 auto;
-        max-width:960px;
+    img{
+        width:200px; 
+        height:200px
     }
 
     nav{ 
+        order:2;
         border: none;
         position: absolute;
         display: inline-block;
@@ -186,22 +209,31 @@ footer {
         background-color: #3c3c5f;
     }
 
-    .menu{
-        max-width:960px; 
-        margin: 0 auto; 
+    .content{
+        display: flex;
+        max-width:960px;
+        flex-direction: column;
+        margin: auto;
     }
 
-    img{
-        width:200px; 
-        height:200px
+    .link{
+        order:3;
+    }
+
+    .menu{
+        order:4;
+    }
+
+    .table{
+        order:5;
     }
 
     table {
+        order:6;
         justify-content: center;
         display: flex;
         text-align: center;
         margin: 0 auto;
-        max-width:960px;
     }
 
     th {
@@ -223,15 +255,23 @@ footer {
         background:  radial-gradient(farthest-corner at 50% 50%, #DCECF8, #c1e3fd);
     }
 
+    .form{
+        order:7;
+    }
+
     form{
+        order:7;
         margin: 0 auto;
-        max-width:960px;
         text-align: center;
         justify-content: center;
     }
 
-    label{
-        display: block;
+    .text{
+        order:7;
+    }
+    
+    .meow{
+        order:8;
     }
 
     footer {
