@@ -6,14 +6,6 @@ header {
     background: #383858;
 }
 
-.logo{
-    display:flex;
-    position: relative;
-    justify-content:space-between;
-    width: 150px;
-    height: 150px;
-}
-
 img{
     width:200px; 
     height:200px
