@@ -2,46 +2,63 @@
 <html>
 <head>
     <title>Калькулятор стоимости заказа</title>
-    <script defer src="calculator.js"></script>
+    <style>
+        .container {
+            margin: 20px;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        label {
+            display: inline-block;
+            width: 100px;
+        }
+        input[type="text"] {
+            width: 200px;
+        }
+        button {
+            padding: 5px 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Калькулятор стоимости заказа</h1>
+    <div class="container">
+        <h2>Калькулятор стоимости заказа</h2>
+        <div class="form-group">
+            <label for="quantity">Количество товара:</label>
+            <input type="text" id="quantity" name="quantity">
+        </div>
+        <div class="form-group">
+            <label for="product">Товар:</label>
+            <select id="product" name="product">
+                <option value="10">Товар 1 - $10</option>
+                <option value="20">Товар 2 - $20</option>
+                <option value="30">Товар 3 - $30</option>
+            </select>
+        </div>
+        <button id="calculateButton">Подсчитать стоимость</button>
+        <div id="result"></div>
+    </div>
 
-    <label for="quantity">Количество товара:</label>
-    <input type="number" id="quantity" min="1" value="1">
-
-    <label for="product">Выберите товар:</label>
-    <select id="product">
-        <option value="10">Товар 1 - 10 рублей</option>
-        <option value="20">Товар 2 - 20 рублей</option>
-        <option value="30">Товар 3 - 30 рублей</option>
-    </select>
-
-    <button id="calculateButton">Подсчитать стоимость</button>
-
-    <p id="result"></p>
-
+    <script defer src="calculator.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             var calculateButton = document.getElementById("calculateButton");
-            calculateButton.addEventListener("click", calculate);
+            calculateButton.addEventListener("click", function() {
+                var quantityInput = document.getElementById("quantity");
+                var productSelect = document.getElementById("product");
+                var resultDiv = document.getElementById("result");
+
+                var quantity = parseInt(quantityInput.value);
+                var price = parseInt(productSelect.value);
+
+                if (isNaN(quantity) || isNaN(price)) {
+                    resultDiv.innerHTML = "Ошибка: введите корректные данные";
+                } else {
+                    var total = quantity * price;
+                    resultDiv.innerHTML = "Стоимость заказа: $" + total;
+                }
+            });
         });
-
-        function calculate() {
-            var quantityInput = document.getElementById("quantity");
-            var productSelect = document.getElementById("product");
-            var resultParagraph = document.getElementById("result");
-
-            var quantity = parseInt(quantityInput.value);
-            var product = parseInt(productSelect.value);
-
-            if (isNaN(quantity) || isNaN(product)) {
-                resultParagraph.textContent = "Ошибка: введите корректные значения";
-            } else {
-                var cost = quantity * product;
-                resultParagraph.textContent = "Стоимость заказа: " + cost + " рублей";
-            }
-        }
     </script>
 </body>
-</html>
