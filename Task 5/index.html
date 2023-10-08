@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Калькулятор стоимости заказа</title>
+    <script defer src="calculator.js"></script>
+</head>
+<body>
+    <h1>Калькулятор стоимости заказа</h1>
+
+    <label for="quantity">Количество товара:</label>
+    <input type="number" id="quantity" min="1" value="1">
+
+    <label for="product">Выберите товар:</label>
+    <select id="product">
+        <option value="10">Товар 1 - 10 рублей</option>
+        <option value="20">Товар 2 - 20 рублей</option>
+        <option value="30">Товар 3 - 30 рублей</option>
+    </select>
+
+    <button id="calculateButton">Подсчитать стоимость</button>
+
+    <p id="result"></p>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var calculateButton = document.getElementById("calculateButton");
+            calculateButton.addEventListener("click", calculate);
+        });
+
+        function calculate() {
+            var quantityInput = document.getElementById("quantity");
+            var productSelect = document.getElementById("product");
+            var resultParagraph = document.getElementById("result");
+
+            var quantity = parseInt(quantityInput.value);
+            var product = parseInt(productSelect.value);
+
+            if (isNaN(quantity) || isNaN(product)) {
+                resultParagraph.textContent = "Ошибка: введите корректные значения";
+            } else {
+                var cost = quantity * product;
+                resultParagraph.textContent = "Стоимость заказа: " + cost + " рублей";
+            }
+        }
+    </script>
+</body>
+</html>
