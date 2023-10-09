@@ -31,9 +31,9 @@
         <div class="form-group">
             <label for="product">Товар:</label>
             <select id="product" name="product">
-                <option value="10">Товар 1 - $10</option>
-                <option value="20">Товар 2 - $20</option>
-                <option value="30">Товар 3 - $30</option>
+                <option value="10">Товар 1 - ₽10</option>
+                <option value="20">Товар 2 - ₽20</option>
+                <option value="30">Товар 3 - ₽30</option>
             </select>
         </div>
         <button id="calculateButton">Подсчитать стоимость</button>
@@ -56,7 +56,7 @@
                     resultDiv.innerHTML = "Ошибка: введите корректные данные";
                 } else {
                     var total = quantity * price;
-                    resultDiv.innerHTML = "Стоимость заказа: $" + total;
+                    resultDiv.innerHTML = "Стоимость заказа: ₽" + total;
                 }
             });
         });
