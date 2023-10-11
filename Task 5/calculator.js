@@ -1,6 +1,7 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function(event) {
     var calculateButton = document.getElementById("calculateButton");
-    calculateButton.addEventListener("click", function() {
+    calculateButton.addEventListener("click", function(event) {
+        event.preventDefault();
         var quantityInput = document.getElementById("quantity");
         var productSelect = document.getElementById("product");
         var resultDiv = document.getElementById("result");
