@@ -1,16 +1,12 @@
+div{
+    background: rgb(193, 210, 255);
+    padding: 10px;
+    border-radius: 15px;
+}
+
 .container {
-            margin: 20px;
-        }
-        .form-group {
-            margin-bottom: 10px;
-        }
-        label {
-            display: inline-block;
-            width: 100px;
-        }
-        input {
-            width: 200px;
-        }
-        button {
-            padding: 5px 10px;
-        }
+    margin: 20px;
+}
+.form-group {
+    margin-bottom: 10px;
+}
