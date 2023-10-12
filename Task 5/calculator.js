@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         let q = quantityInput.value;
         let p = productSelect.value;
-        if (q.isNaN() || p.isNan()) {
+        if (q.match(/^\d+$/) === null || p.match(/^\d+$/) === null) {
             resultDiv.innerHTML = "Ошибка: введите корректные данные";
         } else {
             let quantity = parseInt(quantityInput.value);
