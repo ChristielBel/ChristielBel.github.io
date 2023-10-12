@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function() {
     var calculateButton = document.getElementById("calculateButton");
     calculateButton.addEventListener("click", function(event) {
         event.preventDefault();
