@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
         var quantity = parseInt(quantityInput.value);
         var price = parseInt(productSelect.value);
 
-        if (str1.match(/^\d+$/) === null || str2.match(/^\d+$/) === null) {
+        if (isNaN(quantity) || isNaN(price)) {
             resultDiv.innerHTML = "Ошибка: введите корректные данные";
         } else {
             var total = quantity * price;
