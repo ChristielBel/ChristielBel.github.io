@@ -1,0 +1,21 @@
+div{
+    background: rgb(193, 210, 255);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.container {
+    margin: 20px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+input[type="number"] {
+    width: 50px;
+}
+  
+#optionsContainer, #propertyContainer {
+    display: none;
+}
