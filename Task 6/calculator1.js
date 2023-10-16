@@ -30,6 +30,8 @@ function updatePrice() {
     let price = 0;
     let prices = getPrices();
     let priceIndex = parseInt(select.value) - 1;
+    let quantityInput = document.getElementById("quantity2");
+    let quantity2 = parseInt(quantityInput.value);
     if (priceIndex >= 0) {
         price = prices.prodTypes[priceIndex];
     }
@@ -70,7 +72,7 @@ function updatePrice() {
         }
     });
     let prodPrice = document.getElementById("prodPrice");
-    prodPrice.innerHTML = "₽" + price;
+    prodPrice.innerHTML = "₽" + price*quantity2;
 }
 
 function getPrices() {
