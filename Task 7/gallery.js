@@ -28,4 +28,11 @@ $(document).ready(function () {
             $(".gallery").slick("slickGoTo", 0);
         });
     });
+    $(document).ready(function () {
+        var scrollToLastPageButton = $("#scrollToLastPage");
+        scrollToLastPageButton.click(function () {
+            var slideCount = $(".gallery").slick("getSlick").slideCount;
+            $(".gallery").slick("slickGoTo", slideCount - 1);
+        });
+    });
 });
