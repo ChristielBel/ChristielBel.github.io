@@ -1,5 +1,5 @@
-/*global document */
-/*global $ */
+/*global document*/
+/*global $*/
 
 $(document).ready(function () {
     $(".gallery").slick({
