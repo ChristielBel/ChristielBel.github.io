@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 setTimeout(function () {
                     formWrapper.style.display = 'none';
-                }, 3000);
+                }, 4000);
             }
         };
 
