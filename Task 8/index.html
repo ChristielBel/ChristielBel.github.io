@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="task8.js" defer></script>
+  <title>Form</title>
+</head>
+<body>
+  <button id="openFormButton">Открыть форму обратной связи</button>
+
+<div id="feedbackFormPopup" style="display: none;">
+  <form id="feedbackForm">
+    <input type="text" id="fullName" placeholder="ФИО" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="tel" id="phone" placeholder="Телефон">
+    <input type="text" id="organization" placeholder="Организация">
+    <textarea id="message" placeholder="Сообщение"></textarea>
+    <label><input type="checkbox" id="agreement" required> Согласие с политикой обработки персональных данных</label>
+    <button type="submit">Отправить</button>
+  </form>
+</div>
+
+<div id="feedbackMessage" style="display: none;"></div>
+</body>
+</html>
