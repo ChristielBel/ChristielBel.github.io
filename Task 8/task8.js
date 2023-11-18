@@ -41,10 +41,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const xhr = new XMLHttpRequest();
         xhr.open('POST', 'https://formcarry.com/s/N_nhDhYffl');
+        xhr.setRequestHeader("Content-Type", "application/json");
         xhr.setRequestHeader('Accept', 'application/json');
 
         xhr.onreadystatechange = function () {
-            if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.readyState === 4) {
+                console.log(xhr.status);
                 if (xhr.status === 200) {
                     feedbackMessage.textContent = 'Форма успешно отправлена!';
                 } else {
@@ -59,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         };
 
-        xhr.send(formData);
+        xhr.send(JSON.stringify(Object.fromEntries(formData.entries())));
     });
 
     const savedFormData = JSON.parse(localStorage.getItem('feedbackFormData'));
