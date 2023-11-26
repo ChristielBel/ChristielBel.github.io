@@ -1,1 +1,91 @@
+.header-background-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -1;
+}
 
+.tariff-btn {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: white;
+  text-decoration: none;
+  padding: 22px 20px;
+  width: 220px;
+  max-width: 100%;
+  text-align: center;
+  border: 2px solid #f14d34;
+  border-radius: 5px;
+  margin-bottom: 55px;
+}
+
+.supp {
+  margin-bottom: 50px;
+}
+
+.parts-wrapper {
+  width: 160px;
+  max-width: 100%;
+  min-height: 80px;
+  height: 100%;
+  padding-left: 15px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  border-left: 2px solid #f14d34;
+}
+
+.upper-part {
+  font-size: 48px;
+  line-height: 1;
+
+}
+
+.lower-part {
+  margin-top: -2px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.25;
+  color: rgba(255, 255, 255, .7);
+}
+
+.second-block {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+header {
+  height: 100%;
+  padding: 30px 5px;
+  color: white;
+}
+
+.header-upper-text {
+  color: white;
+}
+
+.big {
+  font-size: 25px;
+  line-height: 1.2;
+}
+
+.small {
+  font-size: 14px;
+  margin-bottom: 50px;
+}
+
+#cup-image {
+  vertical-align: baseline;
+  position: absolute;
+  left: 75px;
+  margin-top: -22px;
+}
+
+@media screen and (min-width: 800px) {
+
+}
