@@ -149,7 +149,7 @@ h2 {
 
 .dropdown-menu {
   font-size: 12px;
-  background-color: black; /* Цвет фона */
+  background-color: black;
   border-radius: 0;
 }
 
@@ -173,6 +173,14 @@ h2 {
   height: 31px;
 }
 
+.supp-menu {
+  width: 100%;
+}
+
+.supp-logo {
+  width: 100%;
+}
+
 @media screen and (min-width: 800px) {
   .overlay {
     background-size: 50%;
@@ -180,14 +188,16 @@ h2 {
 
   .main-container {
     margin-top: 50px;
-    margin-left: 220px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .navbar {
     border: none;
     background: none;
     position: relative;
-    padding: 0 180px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .header-logo {
@@ -216,6 +226,7 @@ h2 {
   }
 
   .glowing-link {
+    white-space: nowrap;
     border-bottom: 3px #f14d34 solid;
   }
 
