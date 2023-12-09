@@ -1,10 +1,154 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Project</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- Подключение Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<!-- Ваши собственные стили -->
+<link rel="stylesheet" type="text/css" href="style.css">
+
+    
+	<title>Project</title>
 </head>
-    <body>
-    </body>
+<body>
+	<header class="container-fluid">
+		<video class="header-background-video" autoplay muted loop>
+			<source src="videos/video.mp4" type="video/mp4">
+		</video>
+		<div class="overlay"></div>
+
+		<div class="row">
+			<div class="col-md-6 text-center">
+				<h1 class="header-upper-text big">Поддержка <br> сайтов на Drupal</h1>
+				<p class="header-upper-text small">Сопровождение и поддержка сайтов <br> на CMS Drupal любых версий и запущенности
+				</p>
+				<a class="btn tariff-btn">Тарифы</a>
+			</div>
+			<div class="col-md-6">
+				<div class="row">
+					<div class="col-6 col-md-4 supp">
+						<div class="parts-wrapper">
+							<div class="upper-part">
+								#1
+								<img src="images/cup.png" alt="cup" id="cup-image">
+							</div>
+							<div class="lower-part">
+								Drupal-разработчик <br> в России по версии <br> рейтинга Рунета
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-md-4 supp">
+						<div class="parts-wrapper">
+							<div class="second-block">
+								3+
+							</div>
+							<div class="lower-part">
+								средний опыт <br> специалистов более <br> 3 лет
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-md-4 supp">
+						<div class="parts-wrapper">
+							<div class="second-block">
+								14
+							</div>
+							<div class="lower-part">
+								лет опыта в сфере <br> Drupal
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-md-4 supp">
+						<div class="parts-wrapper">
+							<div class="second-block">
+								50+
+							</div>
+							<div class="lower-part">
+								модулей и тем <br> в формате DrupalGive
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-md-4 supp">
+						<div class="parts-wrapper">
+							<div class="second-block">
+								90 000+
+							</div>
+							<div class="lower-part">
+								часов поддержки <br> сайтов на Drupal
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-md-4 supp">
+						<div class="parts-wrapper">
+							<div class="second-block">
+								300+
+							</div>
+							<div class="lower-part">
+								Проектов <br> на поддержке
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<nav class="navbar navbar-expand-lg navbar-dark fixed-bottom" style="background-color: black;">
+		<div class="container">
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#">ПОДДЕРЖКА DRUPAL</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown"
+						   aria-haspopup="true" aria-expanded="false">
+							АДМИНИСТРИРОВАНИЕ
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+							<li><a class="dropdown-item" href="#">МИГРАЦИЯ</a></li>
+							<li><a class="dropdown-item" href="#">БЭКАПЫ</a></li>
+							<li><a class="dropdown-item" href="#">АУДИТ БЕЗОПАСНОСТИ</a></li>
+							<li><a class="dropdown-item" href="#">ОПТИМИЗАЦИЯ СКОРОСТИ</a></li>
+							<li><a class="dropdown-item" href="#">ПЕРЕЕЗД НА HTTPS</a></li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">ПРОДВИЖЕНИЕ</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">РЕКЛАМА</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							О НАС
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+							<li><a class="dropdown-item" href="#">КОМАНДА</a></li>
+							<li><a class="dropdown-item" href="#">DRUPALGIVE</a></li>
+							<li><a class="dropdown-item" href="#">БЛОГ</a></li>
+							<li><a class="dropdown-item" href="#">КУРСЫ DRUPAL</a></li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">ПРОЕКТЫ</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">КОНТАКТЫ</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<a class="navbar-brand" href="#">
+			<img src="images/drupal-coder.svg" alt="Home" rel="home">
+		</a>
+		<button class="navbar-toggler btn" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+	</nav>	
+
 </html>
