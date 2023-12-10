@@ -1,15 +1,34 @@
 <script>
-import drupal_coder from "../assets/images/drupal-coder.svg"
 import cup from "../assets/images/cup.png"
 import background_video from "../assets/videos/video.mp4"
+import Navbar from "@/components/Navbar.vue";
+import HeaderTextBlock from "@/components/HeaderTextBlock.vue";
+import HeaderImageBlock from "@/components/HeaderImageTextBlock.vue";
+import HeaderTextImageBlock from "@/components/HeaderImageTextBlock.vue";
 
 export default {
   name: "header",
+  components: {
+    HeaderTextImageBlock,
+    HeaderImageBlock,
+    HeaderTextBlock,
+    Navbar
+  },
   data: () => {
     return {
-      drupal_coder,
-      background_video,
-      cup
+      cup,
+      lower_text1: "Drupal-разработчик \nв России по версии \nрейтинга Рунета",
+      upper_text2: "3+",
+      lower_text2: "средний опыт \nспециалистов более \n3 лет",
+      upper_text3: "14",
+      lower_text3: "лет опыта в сфере \nDrupal",
+      upper_text4: "50+",
+      lower_text4: "модулей и тем \nв формате DrupalGive",
+      upper_text5: "90 000+",
+      lower_text5: "часов поддержки \nсайтов на Drupal",
+      upper_text6: "300+",
+      lower_text6: "Проектов \nна поддержке",
+      background_video
     }
   }
 };
@@ -17,76 +36,7 @@ export default {
 
 <template>
   <div class="wrapper container-fluid">
-    <nav class="navbar navbar-expand-md navbar-dark mx-0 px-0">
-      <div class="container justify-content-center">
-        <div class="row order-md-1 supp-menu">
-          <div class="col-12">
-            <div class="container order-md-1 ">
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item glowing-link">
-                    <a class="nav-link" href="#">ПОДДЕРЖКА DRUPAL</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
-                       data-toggle="dropdown"
-                       aria-haspopup="true" aria-expanded="false">
-                      АДМИНИСТРИРОВАНИЕ
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                      <li><a class="dropdown-item" href="#">МИГРАЦИЯ</a></li>
-                      <li><a class="dropdown-item" href="#">БЭКАПЫ</a></li>
-                      <li><a class="dropdown-item" href="#">АУДИТ БЕЗОПАСНОСТИ</a></li>
-                      <li><a class="dropdown-item" href="#">ОПТИМИЗАЦИЯ СКОРОСТИ</a></li>
-                      <li><a class="dropdown-item" href="#">ПЕРЕЕЗД НА HTTPS</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">ПРОДВИЖЕНИЕ</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">РЕКЛАМА</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
-                       data-toggle="dropdown"
-                       aria-haspopup="true" aria-expanded="false">
-                      О НАС
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                      <li><a class="dropdown-item" href="#">КОМАНДА</a></li>
-                      <li><a class="dropdown-item" href="#">DRUPALGIVE</a></li>
-                      <li><a class="dropdown-item" href="#">БЛОГ</a></li>
-                      <li><a class="dropdown-item" href="#">КУРСЫ DRUPAL</a></li>
-                    </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">ПРОЕКТЫ</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">КОНТАКТЫ</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row supp-logo">
-          <div class="col-6">
-
-            <a class="navbar-brand" href="#">
-              <img class="header-logo" v-bind:src="drupal_coder" alt="Home" rel="home">
-            </a>
-          </div>
-          <div class="col-6 text-right">
-            <button class="navbar-toggler btn" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </nav>
+   <Navbar/>
 
     <video class="background-video" autoplay muted loop>
       <source v-bind:src="background_video" type="video/mp4">
@@ -104,67 +54,12 @@ export default {
         </div>
         <div class="col-md-6">
           <div class="row">
-            <div class="col-6 col-md-4 supp">
-              <div class="parts-wrapper">
-                <div class="upper-part">
-                  #1
-                  <img v-bind:src="cup" alt="cup" id="cup-image">
-                </div>
-                <div class="lower-part">
-                  Drupal-разработчик <br> в России по версии <br> рейтинга Рунета
-                </div>
-              </div>
-            </div>
-            <div class="col-6 col-md-4 supp">
-              <div class="parts-wrapper">
-                <div class="second-block">
-                  3+
-                </div>
-                <div class="lower-part">
-                  средний опыт <br> специалистов более <br> 3 лет
-                </div>
-              </div>
-            </div>
-            <div class="col-6 col-md-4 supp">
-              <div class="parts-wrapper">
-                <div class="second-block">
-                  14
-                </div>
-                <div class="lower-part">
-                  лет опыта в сфере <br> Drupal
-                </div>
-              </div>
-            </div>
-            <div class="col-6 col-md-4 supp">
-              <div class="parts-wrapper">
-                <div class="second-block">
-                  50+
-                </div>
-                <div class="lower-part">
-                  модулей и тем <br> в формате DrupalGive
-                </div>
-              </div>
-            </div>
-            <div class="col-6 col-md-4 supp">
-              <div class="parts-wrapper">
-                <div class="second-block">
-                  90 000+
-                </div>
-                <div class="lower-part">
-                  часов поддержки <br> сайтов на Drupal
-                </div>
-              </div>
-            </div>
-            <div class="col-6 col-md-4 supp">
-              <div class="parts-wrapper">
-                <div class="second-block">
-                  300+
-                </div>
-                <div class="lower-part">
-                  Проектов <br> на поддержке
-                </div>
-              </div>
-            </div>
+            <HeaderTextImageBlock :image="cup" :lower_text="lower_text1" />
+            <HeaderTextBlock :lower_text="lower_text2" :upper_text="upper_text2" />
+            <HeaderTextBlock :lower_text="lower_text3" :upper_text="upper_text3" />
+            <HeaderTextBlock :lower_text="lower_text4" :upper_text="upper_text4" />
+            <HeaderTextBlock :lower_text="lower_text5" :upper_text="upper_text5" />
+            <HeaderTextBlock :lower_text="lower_text6" :upper_text="upper_text6" />
           </div>
         </div>
       </div>
@@ -226,40 +121,6 @@ video {
   background-color: #f14d34;
 }
 
-.supp {
-  margin-bottom: 30px;
-}
-
-.parts-wrapper {
-  border-left: 3px solid #f14d34;
-  padding-left: 15px;
-  padding-top: 5px;
-  padding-bottom: 10px;
-  min-height: 80px;
-  height: 100%;
-}
-
-.upper-part {
-  font-size: 48px;
-  margin-top: -27px;
-}
-
-.lower-part {
-  margin-top: -2px;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.25;
-  color: rgba(255, 255, 255, .7);
-}
-
-.second-block {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 1;
-  margin-bottom: 5px;
-  position: relative;
-}
-
 .wrapper {
   position: relative;
   font-weight: 700;
@@ -283,73 +144,12 @@ video {
   margin-bottom: 50px;
 }
 
-#cup-image {
-  vertical-align: baseline;
-  position: absolute;
-}
-
 h2 {
   vertical-align: center;
   text-align: center;
 }
 
-.navbar-nav li a {
-  padding: 8px 20px;
-  border-bottom: 1px solid #312a2a;
-}
-
-.glowing-link {
-  color: #f14d34;
-}
-
-.navbar-toggler {
-  border: none;
-}
-
-.navbar-toggler:focus, .navbar-toggler:active {
-  outline: none;
-  box-shadow: none;
-}
-
-.navbar-dark .navbar-nav .nav-link {
-  color: white;
-}
-
-.dropdown-menu {
-  font-size: 12px;
-  background-color: black;
-  border-radius: 0;
-}
-
-.dropdown-item {
-  color: white;
-}
-
-.navbar {
-  z-index: 2;
-  font-weight: 500;
-  background-color: black;
-  font-size: 12px;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
-
-.header-logo {
-  width: 156px;
-  height: 31px;
-}
-
-.supp-menu {
-  width: 100%;
-}
-
-.supp-logo {
-  width: 100%;
-}
-
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 768px) {
   .overlay {
     background-size: 50%;
   }
@@ -360,42 +160,8 @@ h2 {
     margin-right: auto;
   }
 
-  .navbar {
-    border: none;
-    background: none;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .header-logo {
-    margin-left: 50px;
-  }
-
   .header-title-div {
     text-align: left;
-  }
-
-  .nav-item {
-    margin: 0 5px;
-  }
-
-  .navbar-nav li a {
-    border: none;
-  }
-
-  .dropdown-menu {
-    background-color: #f14d34;
-  }
-
-  .dropdown-item:hover {
-    background-color: #ab1a0e;
-    color: white;
-  }
-
-  .glowing-link {
-    white-space: nowrap;
-    border-bottom: 3px #f14d34 solid;
   }
 
   .big {
@@ -404,10 +170,6 @@ h2 {
 
   .small {
     font-size: 18px;;
-  }
-
-  .supp {
-    margin-bottom: 80px;
   }
 }
 </style>
