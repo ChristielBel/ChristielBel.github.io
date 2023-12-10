@@ -116,7 +116,7 @@ export default {
 }
 
 .navbar {
-  z-index: 2;
+  z-index: 20;
   font-weight: 500;
   background-color: black;
   font-size: 12px;
