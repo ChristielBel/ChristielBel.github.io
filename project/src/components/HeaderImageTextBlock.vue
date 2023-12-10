@@ -20,7 +20,7 @@ export default {
     <div class="parts-wrapper">
       <div class="upper-part">
         #1
-        <img v-bind:src="image" alt="cup" id="ins-image">
+        <img v-bind:src="image" alt="image" id="ins-image">
       </div>
       <div class="lower-part">
         {{ lower_text }}
