@@ -3,6 +3,7 @@ import Header from "@/components/Header.vue";
 import Support from "@/components/Support.vue";
 import Service from "@/components/Service.vue"
 import TimeTasks from "@/components/TimeTasks.vue";
+import Experience from "@/components/Experience.vue";
 </script>
 
 <template>
@@ -10,6 +11,7 @@ import TimeTasks from "@/components/TimeTasks.vue";
     <Header/>
     <Service/>
     <Support/>
+    <Experience/>
     <TimeTasks/>
   </div>
 </template>
