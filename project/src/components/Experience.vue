@@ -81,6 +81,7 @@ export default {
 @media screen and (max-width: 768px) {
   .laptop {
     bottom: 0px;
+    transform: none;
   }
 
   .main-block {

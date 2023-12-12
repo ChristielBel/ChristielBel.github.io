@@ -71,8 +71,12 @@ export default {
 
 <style scoped>
 .support-main-block {
-  margin-bottom: -200px;
+  margin-bottom: -170px;
   position: relative;
+}
+
+.flex-row{
+  margin-bottom: 75px;
 }
 
 .support-title {
