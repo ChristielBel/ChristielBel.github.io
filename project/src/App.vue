@@ -1,12 +1,14 @@
 <script setup>
 import Header from "@/components/Header.vue";
 import Support from "@/components/Support.vue";
+import Experience from "@/components/Experience.vue";
 </script>
 
 <template>
   <div class="main">
     <Header/>
     <Support/>
+    <Experience/>
   </div>
 </template>
 

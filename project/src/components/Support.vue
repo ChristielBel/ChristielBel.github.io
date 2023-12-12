@@ -46,28 +46,35 @@ export default {
 </script>
 
 <template>
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-12">
-        <h1 class="support-title text-center">
-          Поддержка <br> от Drupal-coder
-        </h1>
+  <div class="support-main-block">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <h1 class="support-title text-center">
+            Поддержка <br> от Drupal-coder
+          </h1>
+        </div>
       </div>
-    </div>
-    <div class="row flex-row">
-      <SupportTask :number="number1" :header="header1" :text="text1" :image="supp1"/>
-      <SupportTask :number="number2" :header="header2" :text="text2" :image="supp2"/>
-      <SupportTask :number="number3" :header="header3" :text="text3" :image="supp3"/>
-      <SupportTask :number="number4" :header="header4" :text="text4" :image="supp4"/>
-      <SupportTask :number="number5" :header="header5" :text="text5" :image="supp5"/>
-      <SupportTask :number="number6" :header="header6" :text="text6" :image="supp6"/>
-      <SupportTask :number="number7" :header="header7" :text="text7" :image="supp7"/>
-      <SupportTask :number="number8" :header="header8" :text="text8" :image="supp8"/>
+      <div class="row flex-row">
+        <SupportTask :number="number1" :header="header1" :text="text1" :image="supp1"/>
+        <SupportTask :number="number2" :header="header2" :text="text2" :image="supp2"/>
+        <SupportTask :number="number3" :header="header3" :text="text3" :image="supp3"/>
+        <SupportTask :number="number4" :header="header4" :text="text4" :image="supp4"/>
+        <SupportTask :number="number5" :header="header5" :text="text5" :image="supp5"/>
+        <SupportTask :number="number6" :header="header6" :text="text6" :image="supp6"/>
+        <SupportTask :number="number7" :header="header7" :text="text7" :image="supp7"/>
+        <SupportTask :number="number8" :header="header8" :text="text8" :image="supp8"/>
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
+.support-main-block {
+  margin-bottom: -200px;
+  position: relative;
+}
+
 .support-title {
   padding-top: 100px;
   margin-bottom: 20px;
