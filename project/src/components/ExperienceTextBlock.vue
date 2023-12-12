@@ -5,17 +5,20 @@ export default {
     main_text: {
       String,
       required: true,
+    },
+    orange_part: {
+      String
     }
   }
-}
-
+};
 </script>
 
 <template>
-  <div class="col-12 col-md-6">
+  <div class="col-8 col-md-6 supp">
     <div class="parts-wrapper">
       <div class="main-part">
         {{ main_text }}
+        <span style="color: #f14d34">{{ orange_part }}</span>
       </div>
     </div>
   </div>
@@ -33,11 +36,12 @@ export default {
 .main-part {
   margin-top: -2px;
   font-weight: 500;
-  font-size: 12px;
-  line-height: 1.25;
-  color: rgba(256,256,256,.7);
+  font-size: 16px;
+  line-height: 1.44;
+  color: rgba(256, 256, 256, .7);
 }
 
-@media screen and (min-width: 768px) {
+.supp {
+  margin-bottom: 30px;
 }
 </style>

@@ -71,7 +71,7 @@ export default {
 
 <style scoped>
 .support-main-block {
-  margin-bottom: -170px;
+  margin-bottom: -270px;
   position: relative;
 }
 
