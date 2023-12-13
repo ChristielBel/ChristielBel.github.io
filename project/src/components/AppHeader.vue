@@ -7,7 +7,7 @@ import HeaderImageBlock from "@/components/HeaderImageTextBlock.vue";
 import HeaderTextImageBlock from "@/components/HeaderImageTextBlock.vue";
 
 export default {
-  name: "header",
+  name: "AppHeader",
   components: {
     HeaderTextImageBlock,
     HeaderImageBlock,

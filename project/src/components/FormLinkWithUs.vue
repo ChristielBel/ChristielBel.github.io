@@ -10,7 +10,7 @@ export default {
 </script>
 
 <template>
-  <div class="container">
+  <div class="container p-0">
     <form class="form" @submit.prevent="" href="">
         <input type="text" class="form-control" id="name" placeholder="Ваше имя" required />
         <input type="tel" class="form-control" id="telephone" placeholder="Телефон" required />
@@ -22,14 +22,19 @@ export default {
         </span>
         <label class="form-check-label" for="subscribe">Отправляя заявку, я даю согласие на <a href="/privacy-policy" class="orange">обрабтку персональных данных</a>.<span class="red">*</span></label>
       </div>
+      <div class="response-block"></div>
       <button type="submit" class="btn btn-primary submit-button">Свяжитесь с нами</button>
     </form>
   </div>
 </template>
 
 <style scoped>
+form {
+  max-width: 100%;
+}
+
 ::placeholder {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 input {
@@ -70,6 +75,9 @@ textarea {
 }
 
 .form-check-input {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
   opacity: 0;
   width: 25px;
   height: 25px;
@@ -109,10 +117,6 @@ textarea {
   opacity: 100%;
 }
 
-.form-check {
-
-}
-
 .form-check-label {
   margin-left: 30px;
   font-size: 12px;
@@ -148,7 +152,23 @@ textarea {
   color: red;
 }
 
+.response-block {
+  display: none;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .form-check-input {
+    bottom: 10px;
+  }
+}
+
 @media screen and (min-width: 1024px) {
+  form {
+    width: 420px;
+    margin-left: auto;
+  }
+
   .check {
     top: 8px
   }
