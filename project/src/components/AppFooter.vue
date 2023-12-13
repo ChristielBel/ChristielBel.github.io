@@ -69,6 +69,14 @@ export default {
 </template>
 
 <style scoped>
+.footer {
+  margin-top: 45px;
+  padding-top: 35px;
+  padding-bottom: 36px;
+  background: linear-gradient(254.72deg,rgba(255,255,255,.276) -114.85%,rgba(255,255,255,0) 69.04%),url(../assets/images/D-flying.svg) no-repeat top center,url(../assets/images/D-footer.svg) no-repeat bottom right,#040613;
+  color: #fff;
+}
+
 .social-links {
   margin: 0;
   padding: 0;
