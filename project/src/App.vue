@@ -1,18 +1,20 @@
 <script setup>
-import Header from "@/components/Header.vue";
 import Support from "@/components/Support.vue";
 import Service from "@/components/Service.vue"
 import TimeTasks from "@/components/TimeTasks.vue";
 import Experience from "@/components/Experience.vue";
+import AppFooter from "@/components/AppFooter.vue";
+import AppHeader from "@/components/AppHeader.vue";
 </script>
 
 <template>
   <div class="main">
-    <Header/>
+    <AppHeader/>
     <Service/>
     <Support/>
     <Experience/>
     <TimeTasks/>
+    <AppFooter/>
   </div>
 </template>
 

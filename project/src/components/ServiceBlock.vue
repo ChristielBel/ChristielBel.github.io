@@ -8,7 +8,6 @@ export default {
     },
     header: {
       String,
-      required: true
     },
     text: {
       String,
