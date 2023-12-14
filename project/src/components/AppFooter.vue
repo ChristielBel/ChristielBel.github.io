@@ -215,12 +215,12 @@ export default {
   }
   .contacts ul li a:before {
     left: 25px;
-    bottom: 143px;
+    bottom: 130px;
   }
 
   .contacts ul li h6:before {
     left: 23px;
-    bottom: 105px;
+    bottom: 90px;
   }
 }
 
@@ -236,12 +236,12 @@ export default {
 
   .contacts ul li a:before {
     left: 25px;
-    bottom: 87px;
+    bottom: 73px;
   }
 
   .contacts ul li h6:before {
     left: 23px;
-    bottom: 50px;
+    bottom: 35px;
   }
 }
 
