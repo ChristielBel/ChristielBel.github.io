@@ -5,6 +5,7 @@ import TimeTasks from "@/components/TimeTasks.vue";
 import Experience from "@/components/Experience.vue";
 import AppFooter from "@/components/AppFooter.vue";
 import AppHeader from "@/components/AppHeader.vue";
+import Tariff from "@/components/Tariff.vue";
 </script>
 
 <template>
@@ -13,6 +14,7 @@ import AppHeader from "@/components/AppHeader.vue";
     <Service/>
     <Support/>
     <Experience/>
+    <Tariff/>
     <TimeTasks/>
     <AppFooter/>
   </div>

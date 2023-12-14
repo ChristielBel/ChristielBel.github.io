@@ -118,6 +118,7 @@ video {
 }
 
 .tariff-btn:hover {
+  color: white !important;
   background-color: #f14d34;
 }
 
