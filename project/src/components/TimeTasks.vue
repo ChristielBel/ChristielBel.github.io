@@ -46,7 +46,7 @@ export default {
 
 <style scoped>
 .service-title {
-  padding-top: 100px;
+  padding-top: 50px;
   margin-bottom: 20px;
   color: #050c33;
   font-weight: 700;
@@ -55,6 +55,7 @@ export default {
 
 @media screen and (min-width: 768px) {
   .service-title {
+    padding-top: 100px;;
     font-size: 42px;
   }
 }

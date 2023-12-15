@@ -51,10 +51,13 @@ export default {
 
 <style scoped>
 .parts-wrapper {
+  border: 1px #c2c2c2 solid;
   background-color: white;
   border-radius: 5px;
   margin-bottom: 30px;
   padding: 20px;
+  transition: all .3s;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 3px #c2c2c2;
 }
 
 .header-wrapper {
@@ -63,22 +66,11 @@ export default {
   font-weight: 700;
   font-size: 24px;
   margin-bottom: 50px;
-}
-
-.header-wrapper::after {
-  z-index: 10;
-  width: 85%;
-  left: 35px;
-  top: 95px;
-  content: "";
-  display: block;
-  position: absolute;
-  height: 2px;
-  background-color: #c2c2c2;
+  border-bottom: 1px #c2c2c2 solid;
 }
 
 .services {
-  list-style: none;
+  list-style: url("../assets/images/check.svg");
   padding-left: 20px;
   padding-bottom: 30px;
 }
@@ -117,5 +109,36 @@ export default {
 .contact-us:hover {
   color: white ;
   background-color: #f14d34;
+}
+
+@media screen and (min-width: 768px) {
+  .parts-wrapper {
+    margin-bottom: 70px;
+  }
+
+  .parts-wrapper:hover {
+    transform: scale(110%);
+  }
+
+  .parts-wrapper:hover .contact-us {
+    color: white ;
+    background-color: #f14d34;
+  }
+
+  .parts-wrapper:hover .header-wrapper::after {
+    left: 25px;
+    width: 85%;
+  }
+
+  .header-wrapper {
+    margin-top: 30px;
+  }
+
+  .header-wrapper::after {
+    width: 80%;
+    left: 38px;
+    top: 125px;
+  }
+
 }
 </style>

@@ -26,40 +26,50 @@ export default {
 </script>
 
 <template>
-<div class="tariff-main-block">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="tariff-title text-center">
-          Тарифы
+  <div class="tariff-main-block">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="tariff-title text-center">
+            Тарифы
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <TariffBlock :type="type1" :add-time="addTime1" :amount="amount1" :option="option1"/>
+        <TariffBlock :type="type2" :add-time="addTime2" :time="time2" :amount="amount2" :option="option2"/>
+        <TariffBlock :type="type3" :add-time="addTime3" :time="time3" :amount="amount3" :option="option3"/>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-6">
+          <div class="description">
+           Вам не подходят наши тарифы? Оставьте заявку и мы предложим вам индивидуальные условия!
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-6">
+          <div class="individual-link">
+            <a class="individual" href="">получить индивидуальный тариф</a>
+          </div>
         </div>
       </div>
     </div>
-    <div class="row">
-      <TariffBlock :type="type1" :add-time="addTime1" :amount="amount1" :option="option1"/>
-      <TariffBlock :type="type2" :add-time="addTime2" :time="time2" :amount="amount2" :option="option2"/>
-      <TariffBlock :type="type3" :add-time="addTime3" :time="time3" :amount="amount3" :option="option3"/>
-    </div>
-    <div class="row">
-      <div class="description">
-        <p>Вам не подходят наши тарифы? Оставьте заявку и мы предложим вам индивидуальные условия!</p>
-      </div>
-      <div class="individual-link">
-        <a class="individual" href="">получить индивидуальный тариф</a>
-      </div>
-    </div>
   </div>
-</div>
 </template>
 
 <style scoped>
 .tariff-main-block {
-  background-color: #c2c2c2;
+  background-image: url(../assets/images/drupal-tariff.svg);
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
 }
+
 
 .tariff-title {
   padding-top: 100px;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   text-align: center;
   color: #050c33;
   font-weight: 700;
@@ -87,9 +97,12 @@ export default {
   text-decoration: underline;
   text-transform: capitalize;
   margin-bottom: 50px;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 @media screen and (min-width: 768px) {
+
   .tariff-title {
     font-size: 42px;
   }
