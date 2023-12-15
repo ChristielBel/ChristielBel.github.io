@@ -33,7 +33,7 @@ export default {
       </div>
       <div class="caption">
         {{caption}}
-        <a class="caption-link" :href="link">http://www.cielparfum.com/</a>
+        <a class="caption-link" :href="link">{{link}}</a>
       </div>
     </div>
   </div>
