@@ -6,6 +6,10 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import 'bootstrap/dist/js/bootstrap.js'
 
+import 'slick-carousel/slick/slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
 const app = createApp(App)
 
 

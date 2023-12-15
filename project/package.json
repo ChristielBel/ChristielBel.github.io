@@ -10,6 +10,10 @@
   },
   "dependencies": {
     "bootstrap-vue": "^2.23.1",
+    "jquery": "^3.7.1",
+    "slick-carousel": "^1.8.1",
+    "slider": "^1.0.4",
+    "swiper": "^11.0.5",
     "vue": "^3.3.11",
     "vue-router": "^4.2.5"
   },

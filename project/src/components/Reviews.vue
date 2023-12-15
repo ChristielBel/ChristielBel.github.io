@@ -23,18 +23,16 @@ export default {
 </script>
 
 <template>
-  <div>
-    <div class="reviews">
-      <div class="logocompany">
-        <img :src="logo" alt="logo">
-      </div>
-      <div class="review">
-        {{ text }}
-      </div>
-      <div class="caption">
-        {{caption}}
-        <a class="caption-link" :href="link">{{link}}</a>
-      </div>
+  <div class="reviews">
+    <div class="logocompany">
+      <img :src="logo" alt="logo">
+    </div>
+    <div class="review">
+      {{ text }}
+    </div>
+    <div class="caption">
+      {{ caption }}
+      <a class="caption-link" :href="link">{{ link }}</a>
     </div>
   </div>
 </template>
@@ -72,7 +70,7 @@ export default {
 }
 
 @media screen and (min-width: 1300px) {
-  .logocompany{
+  .logocompany {
     margin-top: 70px;
   }
 
@@ -81,7 +79,7 @@ export default {
     margin-right: 15px;
   }
 
-  .reviews{
+  .reviews {
     margin-left: 80px;
     width: 55%;
   }

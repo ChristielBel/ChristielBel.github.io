@@ -8,10 +8,12 @@ import logo5 from "@/assets/images/logo-estee.png"
 import logo6 from "@/assets/images/cableman_ru.png"
 import logo7 from "@/assets/images/logo_2.png"
 import logo8 from "@/assets/images/lpcma_rus_v4.jpg"
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/swiper-bundle.css';
 
 export default {
   name: "Slider",
-  components:{Reviews},
+  components:{Reviews,SwiperSlide,Swiper},
   data() {
     return {
       text1:"Долгие поиски единственного и неповторимого мастера на многострадальный сайт www.cielparfum.com, который был собран крайне некомпетентным программистом и раз в месяц стабильно грозил погибнуть, привели меня на сайт и, в итоге, к ребятам из Drupal-coder. И вот уже практически полгода как не проходит и дня, чтобы я не поудивлялась и не порадовалась своему везению! Починили все, что не работало - от поиска до отображения меню. Провели редизайн - не отходя от желаемого, но со своими существенными и качественными дополнениями. Осуществили ряд проектов - конкурсы, тесты и тд. А уж мелких починок и доработок - не счесть! И главное - все качественно и быстро (не взирая на не самый «быстрый» тариф). Есть вопросы - замечательный Алексей всегда подскажет, поддержит, отремонтирует и/или просто сделает с нуля. Есть задумка для реализации - замечательный Сергей обсудит и предложит идеальный вариант. Есть проблема - замечательные Надежда и Роман починят, поправят, сделают! Ребята доказали, что эта CMS - мощная и грамотная система управления. Надеюсь, что наше сотрудничество затянется надолго! Спасибо!",
@@ -45,7 +47,28 @@ export default {
       logo5,
       logo6,
       logo7,
-      logo8
+      logo8,
+      swiperOptions: {
+        loop: true,
+        pagination: {
+          el: '.swiper-pagination',
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        autoplay: {
+          delay: 5000,
+        },
+      },
+      methods: {
+        prevSlide() {
+          this.$refs.mySwiper.swiper.slidePrev();
+        },
+        nextSlide() {
+          this.$refs.mySwiper.swiper.slideNext();
+        },
+      },
     };
   }
 };
@@ -59,28 +82,44 @@ export default {
       </div>
     </div>
     <div class="row slick">
-      <div class="content">
-        <Reviews :text="text1" :caption="caption1" :link="link1" :logo="logo1"/>
-        <Reviews :text="text2" :caption="caption2" :link="link2" :logo="logo2"/>
-        <Reviews :text="text3" :caption="caption3" :link="link3" :logo="logo3"/>
-        <Reviews :text="text4" :caption="caption4" :link="link4" :logo="logo4"/>
-        <Reviews :text="text5" :caption="caption5" :link="link5" :logo="logo5"/>
-        <Reviews :text="text6" :caption="caption6" :link="link6" :logo="logo6"/>
-        <Reviews :text="text7" :caption="caption7" :link="link7" :logo="logo7"/>
-        <Reviews :text="text8" :caption="caption8" :link="link8" :logo="logo8"/>
+      <swiper ref="mySwiper" :options="swiperOptions" :slides-per-view="1" class="content">
+        <swiper-slide>
+          <Reviews :text="text1" :caption="caption1" :link="link1" :logo="logo1"/>
+        </swiper-slide>
+        <swiper-slide>
+          <Reviews :text="text2" :caption="caption2" :link="link2" :logo="logo2"/>
+        </swiper-slide>
+        <swiper-slide>
+          <Reviews :text="text3" :caption="caption3" :link="link3" :logo="logo3"/>
+        </swiper-slide>
+        <swiper-slide>
+          <Reviews :text="text4" :caption="caption4" :link="link4" :logo="logo4"/>
+        </swiper-slide>
+        <swiper-slide>
+          <Reviews :text="text5" :caption="caption5" :link="link5" :logo="logo5"/>
+        </swiper-slide>
+        <swiper-slide>
+          <Reviews :text="text6" :caption="caption6" :link="link6" :logo="logo6"/>
+        </swiper-slide>
+        <swiper-slide>
+          <Reviews :text="text7" :caption="caption7" :link="link7" :logo="logo7"/>
+        </swiper-slide>
+        <swiper-slide>
+          <Reviews :text="text8" :caption="caption8" :link="link8" :logo="logo8"/>
+        </swiper-slide>
         <div class="buttons">
-          <button type="button" data-role="none" class="arrow prev-button" aria-label="Previous">Previous</button>
+          <button type="button" @click="prevSlide" data-role="none" class="arrow prev-button swiper-button-prev" aria-label="Previous">Previous</button>
           <span class="num">
             <span class="current-num">
               01
             </span>
             / 08
           </span>
-          <button type="button" data-role="none" class="arrow next-button" aria-label="Next">Next</button>
+          <button type="button" @click="nextSlide" data-role="none" class="arrow next-button swiper-button-next" aria-label="Next">Next</button>
         </div>
         <div class="back1"></div>
         <div class="back2"></div>
-      </div>
+      </swiper>
     </div>
   </div>
 </template>
