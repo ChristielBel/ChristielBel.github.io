@@ -1,5 +1,54 @@
 <script>
+import Reviews from "@/components/Reviews.vue"
+import logo1 from "@/assets/images/logo_0.png"
+import logo2 from "@/assets/images/logo.png"
+import logo3 from "@/assets/images/farbors_ru.jpg"
+import logo4 from "@/assets/images/nashagazeta_ch.png"
+import logo5 from "@/assets/images/logo-estee.png"
+import logo6 from "@/assets/images/cableman_ru.png"
+import logo7 from "@/assets/images/logo_2.png"
+import logo8 from "@/assets/images/lpcma_rus_v4.jpg"
 
+export default {
+  name: "Slider",
+  components:{Reviews},
+  data() {
+    return {
+      text1:"Долгие поиски единственного и неповторимого мастера на многострадальный сайт www.cielparfum.com, который был собран крайне некомпетентным программистом и раз в месяц стабильно грозил погибнуть, привели меня на сайт и, в итоге, к ребятам из Drupal-coder. И вот уже практически полгода как не проходит и дня, чтобы я не поудивлялась и не порадовалась своему везению! Починили все, что не работало - от поиска до отображения меню. Провели редизайн - не отходя от желаемого, но со своими существенными и качественными дополнениями. Осуществили ряд проектов - конкурсы, тесты и тд. А уж мелких починок и доработок - не счесть! И главное - все качественно и быстро (не взирая на не самый «быстрый» тариф). Есть вопросы - замечательный Алексей всегда подскажет, поддержит, отремонтирует и/или просто сделает с нуля. Есть задумка для реализации - замечательный Сергей обсудит и предложит идеальный вариант. Есть проблема - замечательные Надежда и Роман починят, поправят, сделают! Ребята доказали, что эта CMS - мощная и грамотная система управления. Надеюсь, что наше сотрудничество затянется надолго! Спасибо!",
+      text2:"Работать с Drupal Coder — это не просто создание сайтов, это создание успешных веб-проектов. Мы с уверенностью рекомендуем Drupal Coder как надежного и профессионального партнера для всех, кто стремится к качественному веб-присутствию.",
+      text3:"Хочу выразить благодарность Drupal Coder за их профессионализм и отличную работу над нашим веб-проектом. Сотрудничество с данной командой оказалось удивительным опытом, который превзошел все наши ожидания.",
+      text4:"Наш проект требовал сложных технических решений, и команда Drupal Coder продемонстрировала выдающийся уровень компетенции. Они не только создали для нас отличный веб-сайт, но и предоставили ценные рекомендации по его улучшению и оптимизации. Особенно хочу отметить внимание к деталям и готовность к оперативному внесению изменений. Drupal Coder проявили гибкость и понимание наших потребностей, что сделало процесс сотрудничества максимально комфортным. Спасибо за ваш профессионализм, креативный подход и внимание к клиенту. Мы уверены, что наше долгосрочное сотрудничество с Drupal Coder будет успешным и продуктивным.",
+      text5:"Хочу выразить благодарность Drupal Coder и лично их ведущему разработчику, Александру Иванову, за отличную работу по созданию и улучшению нашего веб-сайта. Сотрудничество с ними превзошло наши ожидания. Drupal Coder - это надежный партнер для тех, кто ценит профессионализм и качество веб-разработки. Мы рады сотрудничеству с этой компанией и с уверенностью рекомендуем ее услуги всем, кто ищет надежного партнера для создания или улучшения своего веб-пространства.",
+      text6:"Миграция, импорт контента и апргейд  Drupal",
+      text7:" Оптимизация и ускорение Drupal-сайтов",
+      text8:"Веб-маркетинг, консультации и работы по SEO",
+      caption1:"С уважением, Наталья Сушкова, руководитель Отдела веб-проектов Группы компаний «Си Эль парфюм»",
+      caption2:"Леонид Иванов, руководитель проекта Personal Writer",
+      caption3:"С наилучшими пожеланиями, Филиппов Марк",
+      caption4:"Винокуров Николай",
+      caption5:"С уважением, Кузин Вадим Леонидович, Генеральный директор Estee-design",
+      caption6:"ЫАОВТдыовадотдвтм",
+      caption7:"ыдвтжвтпжвлтаж",
+      caption8:"ьаадвытпдтыпдт",
+      link1:"http://www.cielparfum.com/",
+      link2:"https://personal-writer.com/",
+      link3:"https://www.farbors.ru/",
+      link4:"https://nashagazeta.ch/",
+      link5:"https://estee-design.ru/",
+      link6:"https://www.cableman.ru/",
+      link7:"https://www.serebro.ag/",
+      link8:"https://lpcma.tsu.ru/",
+      logo1,
+      logo2,
+      logo3,
+      logo4,
+      logo5,
+      logo6,
+      logo7,
+      logo8
+    };
+  }
+};
 </script>
 
 <template>
@@ -9,40 +58,16 @@
         <h1 class="slider-title">Отзывы</h1>
       </div>
     </div>
-    <div class="row">
+    <div class="row slick">
       <div class="content">
-        <div class="reviews">
-          <div class="logocompany">
-            <img src="@/assets/images/logo_0.png" alt="logo">
-          </div>
-          <div class="review">
-            Долгие поиски единственного и неповторимого мастера на
-            многострадальный сайт www.cielparfum.com, который был
-            собран крайне некомпетентным программистом и раз в
-            месяц стабильно грозил погибнуть, привели меня на сайт
-            и, в итоге, к ребятам из Drupal-coder. И вот уже
-            практически полгода как не проходит и дня, чтобы я не
-            поудивлялась и не порадовалась своему везению!
-            Починили все, что не работало - от поиска до отображения
-            меню. Провели редизайн - не отходя от желаемого, но со
-            своими существенными и качественными дополнениями.
-            Осуществили ряд проектов - конкурсы, тесты и тд. А уж
-            мелких починок и доработок - не счесть! И главное - все
-            качественно и быстро (не взирая на не самый "быстрый"
-            тариф). Есть вопросы - замечательный Алексей всегда
-            подскажет, поддержит, отремонтирует и/или просто
-            сделает с нуля. Есть задумка для реализации -
-            замечательный Сергей обсудит и предложит идеальный
-            вариант. Есть проблема - замечательные Надежда и Роман
-            починят, поправят, сделают! Ребята доказали, что эта CMS -
-            мощная и грамотная система управления. Надеюсь, что
-            наше сотрудничество затянется надолго! Спасибо!
-          </div>
-          <div class="caption">
-            С уважением, Наталья Сушкова, руководитель Отдела веб-проектов Группы компаний "Си Эль парфюм"
-            <a class="caption-link" href="http://www.cielparfum.com/">http://www.cielparfum.com/</a>
-          </div>
-        </div>
+        <Reviews :text="text1" :caption="caption1" :link="link1" :logo="logo1"/>
+        <Reviews :text="text2" :caption="caption2" :link="link2" :logo="logo2"/>
+        <Reviews :text="text3" :caption="caption3" :link="link3" :logo="logo3"/>
+        <Reviews :text="text4" :caption="caption4" :link="link4" :logo="logo4"/>
+        <Reviews :text="text5" :caption="caption5" :link="link5" :logo="logo5"/>
+        <Reviews :text="text6" :caption="caption6" :link="link6" :logo="logo6"/>
+        <Reviews :text="text7" :caption="caption7" :link="link7" :logo="logo7"/>
+        <Reviews :text="text8" :caption="caption8" :link="link8" :logo="logo8"/>
         <div class="buttons">
           <button type="button" data-role="none" class="arrow prev-button" aria-label="Previous">Previous</button>
           <span class="num">
@@ -79,16 +104,15 @@
   box-shadow: 0px 4px 60px rgba(162,162,162,.25);
   border-radius: 5px;
   position: absolute;
-  top: -40px;
+  top: -20px;
   bottom: 0;
-  left: 64px;
-  right: 64px;
+  left: 20px;
+  right: 20px;
   z-index: 5;
-  height: 41px;
+  height: 20px;
 }
 
 .back2{
-  height: 72px;
   display: block;
   background: #fff;
   opacity: .34;
@@ -97,42 +121,12 @@
   box-shadow: 0px 4px 60px rgba(162,162,162,.25);
   border-radius: 5px;
   position: absolute;
-  top: -72px;
+  top: -40px;
   bottom: 0;
-  left: 128px;
-  right: 128px;
+  left: 40px;
+  right: 40px;
   z-index: 4;
-}
-
-.logocompany {
-  margin-top: 20px;
-  margin-left: 15px;
-}
-
-.review {
-  margin-left: 15px;
-  margin-top: 45px;
-  margin-bottom: 30px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.2;
-  color: #050c33;
-}
-
-.caption {
-  margin-left: 15px;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.2;
-  color: #838b9c;
-  margin-bottom: 20px;
-}
-
-.caption-link {
-  text-decoration: underline;
-  color: #050c33;
-  outline: none;
-  font-weight: 400;
+  height: 40px;
 }
 
 .content {
@@ -198,20 +192,6 @@
     justify-content: space-between;
   }
 
-  .logocompany{
-    margin-top: 70px;
-  }
-
-  .review {
-    flex: 2;
-    margin-right: 15px;
-  }
-
-  .reviews{
-    margin-left: 80px;
-    width: 55%;
-  }
-
   .buttons {
     width: 30%;
     display: flex;
@@ -222,6 +202,21 @@
     text-align: center;
     border-left: 1px solid #cdcdcd;
     border-top: none;;
+  }
+
+  .back1{
+    top: -40px;
+    bottom: 0;
+    left: 64px;
+    right: 64px;
+    height: 41px;
+  }
+
+  .back2{
+    top: -72px;
+    left: 128px;
+    right: 128px;
+    height: 72px;
   }
 }
 </style>
