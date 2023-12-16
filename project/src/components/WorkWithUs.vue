@@ -23,30 +23,31 @@ export default {
         }
     },
     mounted() {
-        new Swiper(this.$refs.swiper1, {
-            slidesPerView: 'auto',
-            spaceBetween: 15,
-            centeredSlides: true,
-            loop: true,
-            autoplay: {     //add
-                delay: 0,   //add
-            },
-        });
-        new Swiper(this.$refs.swiper2, {
-            slidesPerView: 'auto',
-            spaceBetween: 15,
-            centeredSlides: true,
-            loop: true,
-            autoplay: {     //add
-                delay: 0,   //add
-            },
-        });
+      const swiper1 = new Swiper(this.$refs.swiper1, {
+        slidesPerView: 'auto',
+        spaceBetween: 15,
+        centeredSlides: true,
+        loop: true,
+        longSwipes:false,
+      });
+
+      const swiper2 = new Swiper(this.$refs.swiper2, {
+        slidesPerView: 'auto',
+        spaceBetween: 15,
+        centeredSlides: false,
+        loop: true,
+        longSwipes:false,
+      });
+      setInterval(() => {
+        swiper1.slideNext();
+        swiper2.slideNext();
+      }, 3000);
     },
 }
 </script>
 
 <template>
-    <div class="support-main-block">
+    <div class="work-main-block">
         <div class="container-fluid wind">
             <div class="row justify-content-center">
                 <div class="col-12">
@@ -82,7 +83,7 @@ export default {
                 </div>
 
             </div>
-            <div class="swiper-container con2" ref="swiper2">
+            <div class="swiper-container" ref="swiper2">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <Partner :image="pic4" />
@@ -125,11 +126,7 @@ export default {
     float: left;
 }
 
-.con2 {
-    margin-right: 100px;
-}
-
-.support-main-block {
+.work-main-block {
     margin-bottom: 0px;
     position: relative;
 }
@@ -153,7 +150,7 @@ export default {
 }
 
 @media screen and (min-width: 768px) {
-    .support-title {
+    .wwu-title {
         margin-bottom: 55px;
         font-size: 42px;
     }

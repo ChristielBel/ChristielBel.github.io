@@ -29,7 +29,6 @@ export default {
     border-width: 1px;
     border-style: solid;
     border-color: #DDD;
-    box-shadow: 0 20px 40px rgba(5, 12, 51, .15);
     display: flex;
     justify-content: center;
     align-items: center;
