@@ -30,8 +30,14 @@ export default {
             text10:"Время работы поддержки также может различаться, но обычно это стандартный рабочий день с возможностью круглосуточной поддержки в случае чрезвычайных ситуаций.",
             text11:"Услуги поддержки обычно включают в себя и обновление ядра Drupal и модулей.",
             text12:"Да, можно пообщаться со специалистом голосом или в мессенджере. Обычно для этого используются телефонные звонки, а также мессенджеры, такие как WhatsApp, Telegram, Skype и другие. Это позволяет заказчикам быстро и удобно общаться с командой поддержки для обсуждения вопросов и уточнения деталей.",
+            currentOpenBlock: null,
         }
-    }
+    },
+    methods: {
+        setCurrentOpenBlock(index) {
+            this.currentOpenBlock = this.currentOpenBlock === index ? null : index;
+        },
+    },
 }
 </script>
 
@@ -47,18 +53,18 @@ export default {
             </div>
             <div class="flex-row">
                 <ol>
-                    <FaqBlock :header="header1" :text="text1" />
-                    <FaqBlock :header="header2" :text="text2" />
-                    <FaqBlock :header="header3" :text="text3" />
-                    <FaqBlock :header="header4" :text="text4" />
-                    <FaqBlock :header="header5" :text="text5" />
-                    <FaqBlock :header="header6" :text="text6" />
-                    <FaqBlock :header="header7" :text="text7" />
-                    <FaqBlock :header="header8" :text="text8" />
-                    <FaqBlock :header="header9" :text="text9" />
-                    <FaqBlock :header="header10" :text="text10" />
-                    <FaqBlock :header="header11" :text="text11" />
-                    <FaqBlock :header="header12" :text="text12" />
+                    <FaqBlock :header="header1" :text="text1" :isOpen="currentOpenBlock === 1" @toggle="setCurrentOpenBlock(1)"/>
+                    <FaqBlock :header="header2" :text="text2" :isOpen="currentOpenBlock === 2" @toggle="setCurrentOpenBlock(2)"/>
+                    <FaqBlock :header="header3" :text="text3" :isOpen="currentOpenBlock === 3" @toggle="setCurrentOpenBlock(3)"/>
+                    <FaqBlock :header="header4" :text="text4" :isOpen="currentOpenBlock === 4" @toggle="setCurrentOpenBlock(4)"/>
+                    <FaqBlock :header="header5" :text="text5" :isOpen="currentOpenBlock === 5" @toggle="setCurrentOpenBlock(5)"/>
+                    <FaqBlock :header="header6" :text="text6" :isOpen="currentOpenBlock === 6" @toggle="setCurrentOpenBlock(6)"/>
+                    <FaqBlock :header="header7" :text="text7" :isOpen="currentOpenBlock === 7" @toggle="setCurrentOpenBlock(7)"/>
+                    <FaqBlock :header="header8" :text="text8" :isOpen="currentOpenBlock === 8" @toggle="setCurrentOpenBlock(8)"/>
+                    <FaqBlock :header="header9" :text="text9" :isOpen="currentOpenBlock === 9" @toggle="setCurrentOpenBlock(9)"/>
+                    <FaqBlock :header="header10" :text="text10" :isOpen="currentOpenBlock === 10" @toggle="setCurrentOpenBlock(10)"/>
+                    <FaqBlock :header="header11" :text="text11" :isOpen="currentOpenBlock === 11" @toggle="setCurrentOpenBlock(11)"/>
+                    <FaqBlock :header="header12" :text="text12" :isOpen="currentOpenBlock === 12" @toggle="setCurrentOpenBlock(12)"/>
                 </ol>
 
             </div>

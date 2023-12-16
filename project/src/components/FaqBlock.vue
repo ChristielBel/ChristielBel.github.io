@@ -4,23 +4,32 @@ export default {
     props: {
         header: {
             String,
-            required: true
+            required: true,
         },
         text: {
             String,
-            required: true
-        }
+            required: true,
+        },
+        isOpen: {
+            type: Boolean,
+            required: true,
+        },
     },
     data() {
         return {
-            isClosed: true
+            isClosed: true,
         };
+    },
+    watch: {
+        isOpen(newValue) {
+            this.isClosed = !newValue;
+        },
     },
     methods: {
         switchBlock() {
-            this.isClosed = !this.isClosed;
-        }
-    }
+            this.$emit("toggle");
+        },
+    },
 };
 </script>
 
@@ -90,6 +99,9 @@ li {
 
 .text-opened {
     display: block;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #212529;
 }
 
 @media screen and (min-width: 768px) {
