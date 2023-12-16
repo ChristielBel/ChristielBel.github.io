@@ -1,0 +1,101 @@
+<script>
+export default {
+    name: "FaqBlock",
+    props: {
+        header: {
+            String,
+            required: true
+        },
+        text: {
+            String,
+            required: true
+        }
+    },
+    data() {
+        return {
+            isClosed: true
+        };
+    },
+    methods: {
+        switchBlock() {
+            this.isClosed = !this.isClosed;
+        }
+    }
+};
+</script>
+
+<template>
+    <button v-on:click="switchBlock" v-bind:class="{ 'button': isClosed, 'button opened': !isClosed }">
+        <div class="advantage">
+            <li>
+                <div v-bind:class="{ 'header': isClosed, 'header header-opened': !isClosed }">
+                    {{ header }}
+                </div>
+                <div v-bind:class="{ 'text': isClosed, 'text text-opened': !isClosed }">
+                    {{ text }}
+                </div>
+            </li>
+        </div>
+    </button>
+</template>
+
+<style scoped>
+li {
+    font-size: 12px;
+    color: #4e5a73;
+}
+
+.button {
+    border-style: solid;
+    border-color: white;
+    background-color: white;
+
+    line-height: 1.5;
+    margin-bottom: 10px;
+    padding: 5px 20px;
+    width: 100%;
+
+    transition: all 0.4s ease;
+}
+
+.opened {
+    border-color: #f14d34;
+}
+
+.advantage {
+    text-align: left;
+    position: relative;
+    padding: 0px 0px 0px;
+    margin: 0 10px;
+}
+
+.header {
+    font-size: 18px;
+    font-weight: 700;
+    color: #050c33;
+    line-height: 1.22;
+
+    transition: all 0.4s ease;
+}
+
+.header-opened {
+    color: #f14d34;
+}
+
+.text {
+    font-size: 16px;
+    line-height: 1.37;
+    color: #4e5a73;
+    display: none;
+}
+
+.text-opened {
+    display: block;
+}
+
+@media screen and (min-width: 768px) {
+    .advantage {
+        margin: 0;
+    }
+}
+</style>
