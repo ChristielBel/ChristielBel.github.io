@@ -24,6 +24,9 @@ export default {
     },
     mounted() {
         this.swiper = new Swiper('.swiper-container', {
+            slidesPerView: 'auto',
+            spaceBetween: 20,
+            centeredSlides: true,
             loop: true,
             autoplay: {
                 delay: 5000, // Задержка в миллисекундах между переключениями
@@ -39,7 +42,7 @@ export default {
 
 <template>
     <div class="support-main-block">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-12">
                     <h1 class="wwu-title">
@@ -53,14 +56,29 @@ export default {
             </div>
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">Слайд 1</div>
-                    <div class="swiper-slide">Слайд 2</div>
-                    <div class="swiper-slide">Слайд 3</div>
+                    <div class="swiper-slide">
+                        <Partner :image="pic1" />
+                    </div>
+                    <div class="swiper-slide">
+                        <Partner :image="pic2" />
+                    </div>
+                    <div class="swiper-slide">
+                        <Partner :image="pic3" />
+                    </div>
+                    <div class="swiper-slide">
+                        <Partner :image="pic1" />
+                    </div>
+                    <div class="swiper-slide">
+                        <Partner :image="pic2" />
+                    </div>
+                    <div class="swiper-slide">
+                        <Partner :image="pic3" />
+                    </div>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
             <div class="row flex-row">
-                <Partner :image="pic1" />
+
             </div>
         </div>
     </div>
@@ -69,14 +87,12 @@ export default {
 <style scoped>
 .swiper-container {
     width: 100%;
-    height: 100%;
+    padding: 50px 0;
 }
 
 .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    /* Дополнительные стили для слайдов */
+    width: 25%;
+    float: left;
 }
 
 .support-main-block {

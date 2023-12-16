@@ -26,20 +26,23 @@ export default {
 .image-container {
     background: #fff;
     border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #DDD;
     box-shadow: 0 20px 40px rgba(5, 12, 51, .15);
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 300px;
-    height: 200px;
+    width: 25vw;
+    height: 15vw;
     overflow: hidden;
 }
 
 .image-container img {
-    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
     height: auto;
-    object-fit: cover;
-    object-position: center;
 }
 
 @media screen and (min-width: 768px) {
