@@ -1,4 +1,5 @@
 <script>
+
 export default {
   name: "Reviews",
   props: {
@@ -71,7 +72,7 @@ export default {
   font-weight: 400;
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1024px) {
   .logocompany{
     margin-top: 70px;
   }
@@ -82,8 +83,8 @@ export default {
   }
 
   .reviews{
+    width: 80% !important;
     margin-left: 80px;
-    width: 55%;
   }
 }
 </style>

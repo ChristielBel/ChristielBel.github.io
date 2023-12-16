@@ -100,63 +100,69 @@ export default {
 </script>
 
 <template>
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <h1 class="slider-title">Отзывы</h1>
-      </div>
-    </div>
-    <div class="row slick">
-      <div id="review-carousel" class="carousel slide carousel-fade content" data-ride="carousel" data-interval="false">
-        <div class="carousel-inner" @transitionend="transitionStart">
-          <div class="carousel-item active" ref="slide1">
-            <Reviews :text="text1" :caption="caption1" :link="link1" :logo="logo1"/>
-          </div>
-          <div class="carousel-item" ref="slide2">
-            <Reviews :text="text2" :caption="caption2" :link="link2" :logo="logo2"/>
-          </div>
-          <div class="carousel-item" ref="slide3">
-            <Reviews :text="text3" :caption="caption3" :link="link3" :logo="logo3"/>
-          </div>
-          <div class="carousel-item" ref="slide4">
-            <Reviews :text="text4" :caption="caption4" :link="link4" :logo="logo4"/>
-          </div>
-          <div class="carousel-item" ref="slide5">
-            <Reviews :text="text5" :caption="caption5" :link="link5" :logo="logo5"/>
-          </div>
-          <div class="carousel-item" ref="slide6">
-            <Reviews :text="text6" :caption="caption6" :link="link6" :logo="logo6"/>
-          </div>
-          <div class="carousel-item" ref="slide7">
-            <Reviews :text="text7" :caption="caption7" :link="link7" :logo="logo7"/>
-          </div>
-          <div class="carousel-item" ref="slide8">
-            <Reviews :text="text8" :caption="caption8" :link="link8" :logo="logo8"/>
-          </div>
+  <div class="reviews-main-block">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="slider-title">Отзывы</h1>
         </div>
+      </div>
+      <div class="row slick">
+        <div id="review-carousel" class="carousel slide carousel-fade content" data-ride="carousel" data-interval="false">
+          <div class="carousel-inner" @transitionend="transitionStart">
+            <div class="carousel-item active" ref="slide1">
+              <Reviews :text="text1" :caption="caption1" :link="link1" :logo="logo1"/>
+            </div>
+            <div class="carousel-item" ref="slide2">
+              <Reviews :text="text2" :caption="caption2" :link="link2" :logo="logo2"/>
+            </div>
+            <div class="carousel-item" ref="slide3">
+              <Reviews :text="text3" :caption="caption3" :link="link3" :logo="logo3"/>
+            </div>
+            <div class="carousel-item" ref="slide4">
+              <Reviews :text="text4" :caption="caption4" :link="link4" :logo="logo4"/>
+            </div>
+            <div class="carousel-item" ref="slide5">
+              <Reviews :text="text5" :caption="caption5" :link="link5" :logo="logo5"/>
+            </div>
+            <div class="carousel-item" ref="slide6">
+              <Reviews :text="text6" :caption="caption6" :link="link6" :logo="logo6"/>
+            </div>
+            <div class="carousel-item" ref="slide7">
+              <Reviews :text="text7" :caption="caption7" :link="link7" :logo="logo7"/>
+            </div>
+            <div class="carousel-item" ref="slide8">
+              <Reviews :text="text8" :caption="caption8" :link="link8" :logo="logo8"/>
+            </div>
+          </div>
 
-        <div class="buttons">
-          <button @click="prevSlide" type="button" href="#review-carousel" role="button" data-slide="prev"
-                  class="carousel-control-prev arrow prev-button" aria-label="Previous">Previous
-          </button>
-          <span class="num">
+          <div class="buttons">
+            <button @click="prevSlide" type="button" href="#review-carousel" role="button" data-slide="prev"
+                    class="carousel-control-prev arrow prev-button" aria-label="Previous">Previous
+            </button>
+            <span class="num">
             <span class="current-num">
               {{ formattedCurrentSlide }}
             </span>
             / 08
           </span>
-          <button @click="nextSlide" type="button" href="#review-carousel" data-role="none" data-slide="next"
-                  class="carousel-control-next arrow next-button" aria-label="Next">Next
-          </button>
+            <button @click="nextSlide" type="button" href="#review-carousel" data-role="none" data-slide="next"
+                    class="carousel-control-next arrow next-button" aria-label="Next">Next
+            </button>
+          </div>
+          <div class="back1"></div>
+          <div class="back2"></div>
         </div>
-        <div class="back1"></div>
-        <div class="back2"></div>
       </div>
     </div>
   </div>
 </template>
 
 <style scoped>
+.reviews-main-block {
+  background: url(../assets/images/quotes.svg) no-repeat top left;
+}
+
 .carousel-item {
   transition: transform 2s ease, opacity .5s ease-out !important;
 }
@@ -258,7 +264,12 @@ export default {
   background-size: contain;
 }
 
-@media screen and (min-width: 1300px) {
+.slick {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@media screen and (min-width: 1024px) {
   .slider-title {
     margin-bottom: 55px;
     font-size: 42px;
