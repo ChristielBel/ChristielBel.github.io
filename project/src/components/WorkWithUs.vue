@@ -23,17 +23,22 @@ export default {
         }
     },
     mounted() {
-        this.swiper = new Swiper('.swiper-container', {
+        new Swiper(this.$refs.swiper1, {
             slidesPerView: 'auto',
-            spaceBetween: 20,
+            spaceBetween: 15,
             centeredSlides: true,
             loop: true,
-            autoplay: {
-                delay: 5000, // Задержка в миллисекундах между переключениями
+            autoplay: {     //add
+                delay: 0,   //add
             },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
+        });
+        new Swiper(this.$refs.swiper2, {
+            slidesPerView: 'auto',
+            spaceBetween: 15,
+            centeredSlides: true,
+            loop: true,
+            autoplay: {     //add
+                delay: 0,   //add
             },
         });
     },
@@ -42,7 +47,7 @@ export default {
 
 <template>
     <div class="support-main-block">
-        <div class="container-fluid">
+        <div class="container-fluid wind">
             <div class="row justify-content-center">
                 <div class="col-12">
                     <h1 class="wwu-title">
@@ -54,7 +59,7 @@ export default {
                     </div>
                 </div>
             </div>
-            <div class="swiper-container">
+            <div class="swiper-container" ref="swiper1">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <Partner :image="pic1" />
@@ -75,24 +80,53 @@ export default {
                         <Partner :image="pic3" />
                     </div>
                 </div>
-                <div class="swiper-pagination"></div>
-            </div>
-            <div class="row flex-row">
 
+            </div>
+            <div class="swiper-container con2" ref="swiper2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <Partner :image="pic4" />
+                    </div>
+                    <div class="swiper-slide">
+                        <Partner :image="pic5" />
+                    </div>
+                    <div class="swiper-slide">
+                        <Partner :image="pic6" />
+                    </div>
+                    <div class="swiper-slide">
+                        <Partner :image="pic4" />
+                    </div>
+                    <div class="swiper-slide">
+                        <Partner :image="pic5" />
+                    </div>
+                    <div class="swiper-slide">
+                        <Partner :image="pic6" />
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </template>
 
 <style scoped>
+.wind {
+    max-width: 100%;
+    overflow: hidden;
+}
+
 .swiper-container {
     width: 100%;
-    padding: 50px 0;
+    padding: 0px 0;
 }
 
 .swiper-slide {
+    margin: 5px;
     width: 25%;
     float: left;
+}
+
+.con2 {
+    margin-right: 100px;
 }
 
 .support-main-block {
@@ -115,6 +149,7 @@ export default {
 
 .wwu-text {
     text-align: center;
+    margin-bottom: 40px;
 }
 
 @media screen and (min-width: 768px) {
