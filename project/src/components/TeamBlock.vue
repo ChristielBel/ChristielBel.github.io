@@ -19,7 +19,7 @@ export default {
 </script>
 
 <template>
-    <div class="col-6 col-md-4 main-block">
+    <div class="col-6 col-lg-4 main-block">
         <div class="advantage">
             <div class="men">
                 <div class="image-wrapper">
@@ -44,13 +44,18 @@ export default {
 
 .advantage {
     height: 100%;
-    padding: 0px 40px 0px 40px;
+    padding: 0px 20px;
     min-height: 300px;
 }
 
 .men {
-    width: 220px;
+    width: 80%; /* Или любой другой подходящий процент */
+    margin: 0 auto;
     margin-bottom: 70px;
+    margin-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .header {
@@ -69,12 +74,15 @@ export default {
 }
 
 .image-wrapper {
+    display: block;
     z-index: 5;
 }
 
-@media screen and (min-width: 768px) {
-    .advantage {
-        margin: 0;
+@media (max-width: 1000px){
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        height: auto;
     }
 }
 </style>

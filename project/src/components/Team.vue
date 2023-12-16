@@ -29,7 +29,7 @@ export default {
 
 <template>
     <div class="team-main-block">
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <div class="col-12">
                     <h1 class="team-title text-center">
@@ -37,12 +37,15 @@ export default {
                     </h1>
                 </div>
             </div>
-            <div class="row flex-row">
+            <div class="row flex-row ">
                 <TeamBlock :header="header1" :text="text1" :image="photo1" />
                 <TeamBlock :header="header2" :text="text2" :image="photo2" />
                 <TeamBlock :header="header3" :text="text3" :image="photo3" />
                 <TeamBlock :header="header4" :text="text4" :image="photo4" />
                 <TeamBlock :header="header5" :text="text5" :image="photo5" />
+            </div>
+            <div class="row justify-content-center">
+                <a class="btn team-btn">Вся команда</a>
             </div>
         </div>
     </div>
@@ -54,24 +57,38 @@ export default {
     margin-bottom: 0px;
     position: relative;
 }
-
-.flex-row {
-    margin-bottom: 0px;
-}
-
 .team-title {
-    padding-top: 100px;
     margin-bottom: 20px;
+    padding-top: 100px;
     text-align: center;
     color: #050c33;
     font-weight: 700;
     font-size: 24px;
 }
+.team-btn {
+    display: inline-block;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #050c33;
+    padding: 10px 30px;
+    border: 1px solid #cccdd5;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1000px) {
     .team-title {
         margin-bottom: 55px;
         font-size: 42px;
     }
+
+    .team-btn {
+    padding: 24px 75px;
+}
 }
 </style>
