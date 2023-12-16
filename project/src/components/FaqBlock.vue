@@ -46,20 +46,19 @@ li {
 }
 
 .button {
+    border-width: 3px;
     border-style: solid;
     border-color: white;
     background-color: white;
-
     line-height: 1.5;
-    margin-bottom: 10px;
-    padding: 5px 20px;
+    padding: 10px 30px;
     width: 100%;
-
     transition: all 0.4s ease;
 }
 
 .opened {
     border-color: #f14d34;
+    margin-bottom: 10px;
 }
 
 .advantage {
@@ -74,8 +73,8 @@ li {
     font-weight: 700;
     color: #050c33;
     line-height: 1.22;
-
     transition: all 0.4s ease;
+    margin-bottom: 15px;
 }
 
 .header-opened {
