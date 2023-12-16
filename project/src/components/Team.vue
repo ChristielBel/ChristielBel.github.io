@@ -29,8 +29,8 @@ export default {
 
 <template>
     <div class="team-main-block">
-        <div class="container">
-            <div class="row justify-content-center">
+        <div class="container-fluid">
+            <div class="row">
                 <div class="col-12">
                     <h1 class="team-title text-center">
                         Команда
@@ -50,13 +50,13 @@ export default {
 
 <style scoped>
 .team-main-block {
+    padding: 0px 0px 0px 0px;
     margin-bottom: 0px;
     position: relative;
 }
 
 .flex-row {
     margin-bottom: 0px;
-    display: flex;
 }
 
 .team-title {

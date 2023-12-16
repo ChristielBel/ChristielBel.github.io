@@ -21,14 +21,16 @@ export default {
 <template>
     <div class="col-6 col-md-4 main-block">
         <div class="advantage">
-            <div class="image-wrapper">
-                <img v-bind:src="image" alt="image" class="img-responsive">
-            </div>
-            <div class="header">
-                {{ header }}
-            </div>
-            <div class="main-text">
-                {{ text }}
+            <div class="men">
+                <div class="image-wrapper">
+                    <img v-bind:src="image" alt="image" class="img-responsive">
+                </div>
+                <div class="header">
+                    {{ header }}
+                </div>
+                <div class="main-text">
+                    {{ text }}
+                </div>
             </div>
         </div>
     </div>
@@ -36,15 +38,19 @@ export default {
 
 <style scoped>
 .main-block {
-    padding: 5px 5px;
+    margin: 0 0px;
+    padding: 0px 0px;
 }
 
 .advantage {
-    box-shadow: 0 20px 40px rgba(5, 12, 51, .15);
     height: 100%;
-    padding: 20px 45px 80px 45px;
+    padding: 0px 40px 0px 40px;
     min-height: 300px;
-    margin: 0 10px;
+}
+
+.men {
+    width: 220px;
+    margin-bottom: 70px;
 }
 
 .header {
@@ -68,7 +74,6 @@ export default {
 
 @media screen and (min-width: 768px) {
     .advantage {
-        min-height: 220px;
         margin: 0;
     }
 }
