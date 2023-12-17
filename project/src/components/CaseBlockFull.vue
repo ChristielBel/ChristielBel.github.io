@@ -10,10 +10,6 @@ export default {
             String,
             required: true
         },
-        text: {
-            String,
-            required: true
-        },
         date: {
             String,
             required: true
@@ -24,67 +20,58 @@ export default {
 
 <template>
     <div class="col-12 col-md-4 main-block">
-        <div class="advantage">
-            <div class="image-wrapper">
-                <img v-bind:src="image" alt="image" class="img-responsive">
+        <div :style="{ backgroundImage: 'url(' + image + ')', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }"
+            class="advantage">
+            <div class="overlay">
+                <div class="header">
+                    {{ header }}
+                </div>
+                <div class="date">
+                    {{ date }}
+                </div>
             </div>
-            <div class="number">
-                {{ date }}
-            </div>
-            <div class="header">
-                {{ header }}
-            </div>
-            <div class="main-text">
-                {{ text }}
-            </div>
-
         </div>
     </div>
 </template>
 
 <style scoped>
 .main-block {
-    padding: 5px 5px;
+    height: 360px;
+    padding: 0px 10px 0px 10px;
+    margin-bottom: 10px;
 }
 
 .advantage {
-    background: #fff;
     border-radius: 5px;
     box-shadow: 0 20px 40px rgba(5, 12, 51, .15);
     position: relative;
-    padding: 0px 0px;
-    margin: 0 10px;
+    height: 100%;
 }
 
-.number {
-    margin-bottom: 20px;
+.advantage img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    padding: 20px 15px 15px 15px;
+    width: 100%;
+    line-height: 1;
+    position: absolute;
+    bottom: 0;
+}
+
+.date {
     font-size: 12px;
-    color: #828a9b;
+    color: #BBB;
 }
 
 .header {
     font-size: 18px;
     font-weight: 700;
-    color: #050c33;
+    color: white;
     line-height: 1.22;
-    margin-bottom: 15px;
-}
-
-.main-text {
-    font-size: 16px;
-    color: #4e5a73;
-    line-height: 1.37;
-    z-index: 10;
-}
-
-.image-wrapper img {
-    width: 100%;
-    height: 100%;
-}
-
-@media screen and (min-width: 768px) {
-    .advantage {
-        margin: 0;
-    }
+    margin-bottom: 5px;
 }
 </style>
