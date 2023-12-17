@@ -45,7 +45,7 @@ export default {
                 <TeamBlock :header="header5" :text="text5" :image="photo5" />
             </div>
             <div class="row justify-content-center">
-                <a class="btn team-btn">Вся команда</a>
+                <a class="btn team-btn" href="#">Вся команда</a>
             </div>
         </div>
     </div>

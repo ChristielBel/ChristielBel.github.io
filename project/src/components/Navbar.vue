@@ -4,18 +4,18 @@ export default {
   name: "Navbar",
   data: () => {
     return {
-      drupal_coder
+      drupal_coder,
     }
-  }
+  },
  };
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-md navbar-dark mx-0 px-0">
+  <nav class="navbar navbar-expand-lg navbar-dark mx-0 px-0">
     <div class="container justify-content-center">
-      <div class="row order-md-1 supp-menu">
+      <div class="row order-lg-1 supp-menu">
         <div class="col-12">
-          <div class="container order-md-1 m-0">
+          <div class="container order-lg-1 m-0">
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item glowing-link">
@@ -139,7 +139,7 @@ export default {
   width: 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1000px) {
   .navbar {
     border: none;
     background: none;
@@ -150,6 +150,10 @@ export default {
 
   .header-logo {
     margin-left: 50px;
+  }
+
+  .container {
+    max-width: none;
   }
 
   .nav-item {

@@ -16,7 +16,7 @@ export default {
 </script>
 
 <template>
-  <div class="col-6 col-md-4 supp">
+  <div class="col-6 col-lg-4 supp">
     <div class="parts-wrapper">
       <div class="upper-part">
         #1
@@ -62,7 +62,7 @@ export default {
   position: absolute;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1000px) {
   .supp {
     margin-bottom: 80px;
   }

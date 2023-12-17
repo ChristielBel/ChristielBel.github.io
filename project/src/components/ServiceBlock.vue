@@ -49,7 +49,7 @@ export default {
   width: 115px;
   height: 70px;
   opacity: 7%;
-  background: url(/src/assets/images/logo_not_pix.svg) no-repeat center;
+  background: url(@/assets/images/logo_not_pix.svg) no-repeat center;
   background-size: contain;
   left: -38px;
   top: 70px;
@@ -60,7 +60,7 @@ export default {
   width: 115px;
   height: 70px;
   opacity: 7%;
-  background: url(/src/assets/images/logo_not_pix.svg) no-repeat center;
+  background: url(@/assets/images/logo_not_pix.svg) no-repeat center;
   background-size: contain;
   left: -38px;
   top: 70px;

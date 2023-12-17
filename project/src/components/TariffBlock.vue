@@ -102,7 +102,7 @@ export default {
   margin-right: auto;
   margin-left: auto;
   line-height: 0.7;
-  text-transform: capitalize;
+  text-transform: uppercase;
   width: 100%;
 }
 
