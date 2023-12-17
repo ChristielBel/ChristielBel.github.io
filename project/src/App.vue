@@ -4,8 +4,10 @@ import Service from "@/components/Service.vue";
 import TimeTasks from "@/components/TimeTasks.vue";
 import Experience from "@/components/Experience.vue";
 import Faq from "@/components/Faq.vue";
+import Team from "@/components/Team.vue";
 import AppFooter from "@/components/AppFooter.vue";
 import AppHeader from "@/components/AppHeader.vue";
+import Slider from "@/components/Slider.vue";
 </script>
 
 <template>
@@ -15,6 +17,8 @@ import AppHeader from "@/components/AppHeader.vue";
     <Support />
     <Experience />
     <TimeTasks />
+    <Team />
+    <Slider/>
     <Faq />
     <AppFooter />
   </div>
