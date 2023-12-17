@@ -6,13 +6,14 @@ import pic1 from "../assets/images/picture_2.webp"
 import pic2 from "../assets/images/picture_1.webp"
 import pic3 from "../assets/images/picture_3.jpg"
 import pic4 from "../assets/images/picture_4.png"
+import pic5 from "../assets/images/picture_5.jpg"
 
 export default {
     name: "LastCases",
     components: { CaseBlockFull, CaseBlockFullBig, CaseBlockHalf },
     data: () => {
         return {
-            pic1, pic2, pic3, pic4,
+            pic1, pic2, pic3, pic4, pic5,
             header1: "Настройка кэширования данных. Апгрейд сервера. Ускорение работысайта в 30 раз!",
             text1: "Влияние скорости загрузки страниц сайта на отказы и конверсии. Кейс ускорения...",
             date1: "03.12.23",
@@ -43,7 +44,7 @@ export default {
                 <CaseBlockHalf :image="pic1" :header="header1" :text="text1" :date="date1" />
                 <CaseBlockFullBig :image="pic2" :header="header2" />
                 <CaseBlockFull :image="pic3" :header="header3" :date="date3" />
-                <CaseBlockFull :image="pic2" :header="header4" :date="date4" />
+                <CaseBlockFull :image="pic5" :header="header4" :date="date4" />
                 <CaseBlockHalf :image="pic4" :header="header5" :text="text5" :date="date5" />
             </div>
         </div>

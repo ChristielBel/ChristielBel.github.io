@@ -16,7 +16,7 @@ export default {
 
 <template>
     <a href="" class="col-12 col-md-8 main-block">
-        <div :style="{ backgroundImage: 'url(' + image + ')', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }"
+        <div :style="{ backgroundPosition: 'center', backgroundImage: 'url(' + image + ')', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }"
             class="advantage">
             <div class="overlay">
                 <div class="header">
@@ -42,9 +42,9 @@ export default {
 }
 
 .advantage img {
+
     max-width: 100%;
     max-height: 100%;
-    object-fit: cover;
 }
 
 .overlay {

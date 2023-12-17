@@ -20,7 +20,7 @@ export default {
 
 <template>
     <a href="" class="col-12 col-md-4 main-block">
-        <div :style="{ backgroundImage: 'url(' + image + ')', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }"
+        <div :style="{ backgroundPosition: 'center', backgroundImage: 'url(' + image + ')', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }"
             class="advantage">
             <div class="overlay">
                 <div class="header">
