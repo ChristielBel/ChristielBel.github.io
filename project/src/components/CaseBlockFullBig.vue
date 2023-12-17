@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: "CaseBlockFull",
+    name: "CaseBlockFullBig",
     props: {
         image: {
             String,
@@ -9,25 +9,18 @@ export default {
         header: {
             String,
             required: true
-        },
-        date: {
-            String,
-            required: true
-        },
+        }
     }
 };
 </script>
 
 <template>
-    <div class="col-12 col-md-4 main-block">
+    <div class="col-12 col-md-8 main-block">
         <div :style="{ backgroundImage: 'url(' + image + ')', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }"
             class="advantage">
             <div class="overlay">
                 <div class="header">
                     {{ header }}
-                </div>
-                <div class="date">
-                    {{ date }}
                 </div>
             </div>
         </div>
