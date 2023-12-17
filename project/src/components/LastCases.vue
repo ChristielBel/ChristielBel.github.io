@@ -19,10 +19,10 @@ export default {
             header2: "Использование отчетов Ecommerce в Яндекс.Метрике",
             header3: "Повышение конверсии страницы с формой заявки с применением AB-тестирования",
             date3: "24.10.23",
-            header4: "mail",
+            header4: "Drupal 7: ускорение времени генерации страниц интернет-магазина на 32%",
             date4: "11.11.23",
-            header5: "mail",
-            text5: "fds",
+            header5: "Обмен товарами и заказами интернет-магазинов на Drupal 7 с 1C: Предприятие, МойСклад, Класс365",
+            text5: "Опубликован релиз модуля...",
             date5: "22.07.23",
         }
     }
@@ -30,11 +30,11 @@ export default {
 </script>
 
 <template>
-    <div class="support-main-block">
+    <div class="main-block">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12">
-                    <h1 class="support-title text-center">
+                    <h1 class="title text-center">
                         Последние кейсы
                     </h1>
                 </div>
@@ -51,7 +51,7 @@ export default {
 </template>
 
 <style scoped>
-.support-main-block {
+.main-block {
     margin-bottom: 0px;
     position: relative;
 }
@@ -60,19 +60,12 @@ export default {
     margin-bottom: 75px;
 }
 
-.support-title {
+.title {
     padding-top: 100px;
     margin-bottom: 20px;
     text-align: center;
     color: #050c33;
     font-weight: 700;
     font-size: 24px;
-}
-
-@media screen and (min-width: 768px) {
-    .support-title {
-        margin-bottom: 55px;
-        font-size: 42px;
-    }
 }
 </style>
