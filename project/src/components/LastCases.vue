@@ -1,16 +1,17 @@
 <script>
-import CaseBlock from "@/components/CaseBlock.vue";
-import pic1 from "../assets/images/support1.svg"
+import CaseBlockFull from "@/components/CaseBlockFull.vue";
+import CaseBlockHalf from "@/components/CaseBlockHalf.vue";
+import pic1 from "../assets/images/picture_1.webp"
 
 export default {
     name: "LastCases",
-    components: { CaseBlock },
+    components: { CaseBlockFull, CaseBlockHalf },
     data: () => {
         return {
             pic1,
             header1: "mail",
             text1: "fds",
-            date1: "01.",
+            date1: "01.07.23",
         }
     }
 }
@@ -27,7 +28,9 @@ export default {
                 </div>
             </div>
             <div class="row flex-row">
-                <CaseBlock :image="pic1" :header="header1" :text="text1" :date="date1" />
+                <CaseBlockHalf :image="pic1" :header="header1" :text="text1" :date="date1" />
+                <CaseBlockFull :image="pic1" :header="header1" :text="text1" :date="date1" />
+                <CaseBlockFull :image="pic1" :header="header1" :text="text1" :date="date1" />
             </div>
         </div>
     </div>

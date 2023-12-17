@@ -1,6 +1,6 @@
 <script>
 export default {
-    name: "CaseBlock",
+    name: "CaseBlockHalf",
     props: {
         image: {
             String,
@@ -23,7 +23,7 @@ export default {
 </script>
 
 <template>
-    <div class="col-12 col-md-3 main-block">
+    <div class="col-12 col-md-4 main-block">
         <div class="advantage">
             <div class="number">
                 {{ date }}
@@ -52,7 +52,7 @@ export default {
     box-shadow: 0 20px 40px rgba(5, 12, 51, .15);
     height: 100%;
     position: relative;
-    padding: 25px 25px 45px;
+    padding: 0px 0px;
     min-height: 292px;
     margin: 0 10px;
 }
@@ -78,11 +78,9 @@ export default {
     z-index: 10;
 }
 
-.image-wrapper {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: 5;
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
 }
 
 @media screen and (min-width: 768px) {
