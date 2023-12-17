@@ -81,10 +81,16 @@ export default {
     color: #4e5a73;
 }
 
+.image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .image-wrapper img {
     border-radius: 5px;
-    width: 100%;
-    height: 100%;
+    height: 200px;
+    width: auto;
 }
 
 @media screen and (min-width: 768px) {
