@@ -3,6 +3,7 @@ import Support from "@/components/Support.vue";
 import Service from "@/components/Service.vue";
 import TimeTasks from "@/components/TimeTasks.vue";
 import Experience from "@/components/Experience.vue";
+import WorkWithUs from "@/components/WorkWithUs.vue";
 import LastCases from "@/components/LastCases.vue";
 import Faq from "@/components/Faq.vue";
 import Team from "@/components/Team.vue";
@@ -21,6 +22,7 @@ import Slider from "@/components/Slider.vue";
     <Team />
     <LastCases />
     <Slider/>
+    <WorkWithUs />
     <Faq />
     <AppFooter />
   </div>
