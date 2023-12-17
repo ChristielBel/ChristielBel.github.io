@@ -19,9 +19,6 @@ export default {
 </template>
 
 <style scoped>
-.main-block {
-    padding: 0px;
-}
 
 .image-container {
     background: #fff;
@@ -45,8 +42,5 @@ export default {
 }
 
 @media screen and (min-width: 768px) {
-    .advantage {
-        margin: 0;
-    }
 }
 </style>
