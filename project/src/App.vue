@@ -9,6 +9,7 @@ import Faq from "@/components/Faq.vue";
 import Team from "@/components/Team.vue";
 import AppFooter from "@/components/AppFooter.vue";
 import AppHeader from "@/components/AppHeader.vue";
+import Tariff from "@/components/Tariff.vue";
 import Slider from "@/components/Slider.vue";
 </script>
 
@@ -18,6 +19,7 @@ import Slider from "@/components/Slider.vue";
     <Service />
     <Support />
     <Experience />
+    <Tariff/>
     <TimeTasks />
     <Team />
     <LastCases />

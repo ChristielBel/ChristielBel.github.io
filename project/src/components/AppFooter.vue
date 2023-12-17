@@ -37,8 +37,10 @@ export default {
                 Просто оставьте заявку и наш менеджер с вами свяжется!
               </div>
               <div class="contacts">
-                <ul>
+                <ul class="tel">
                   <li><h6>8 800 222-26-73</h6></li>
+                </ul>
+                <ul class="mail">
                   <li><a href="https://info@drupal-coder.ru">info@drupal-coder.ru</a></li>
                 </ul>
               </div>
@@ -105,12 +107,19 @@ export default {
   color: rgba(256, 256, 256, .7);
 }
 
+.tel {
+  list-style: url("../assets/images/phone.svg");
+}
+
+.mail {
+  list-style: url("../assets/images/mail.svg");
+}
+
 .contacts {
   margin-bottom: 30px;
 }
 
 .contacts ul {
-  list-style: none;
 }
 
 .contacts ul li {
@@ -128,32 +137,6 @@ export default {
   font-size: 32px;
   color: #fff;
   font-weight: 700;
-}
-
-.contacts ul li a:before {
-  content: "";
-  display: block;
-  width: 18px;
-  height: 18px;
-  background: url(../assets/images/phone.svg) no-repeat center;
-  background-size: contain;
-  position: absolute;
-  left: 25px;
-  bottom: 70px;
-  opacity: .8;
-}
-
-.contacts ul li h6:before {
-  content: "";
-  display: block;
-  width: 24px;
-  height: 18px;
-  background: url(../assets/images/mail.svg) no-repeat center;
-  background-size: contain;
-  position: absolute;
-  left: 23px;
-  bottom: 33px;
-  opacity: .8;
 }
 
 .social-wrapper {
@@ -197,30 +180,12 @@ export default {
 
 .bottom-row {
   margin-top: 70px;
-}
-
-.bottom-row:after {
-  width: 200vw;
-  content: "";
-  display: block;
-  position: absolute;
-  right: -100px;
-  height: 1px;
-  background: rgba(256, 256, 256, .3);
+  border-top: 1px rgba(256, 256, 256, .3) solid;
 }
 
 @media screen and (min-width: 768px) {
   .contacts {
     margin-bottom: 0;
-  }
-  .contacts ul li a:before {
-    left: 25px;
-    bottom: 130px;
-  }
-
-  .contacts ul li h6:before {
-    left: 23px;
-    bottom: 90px;
   }
 }
 

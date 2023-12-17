@@ -48,7 +48,7 @@ export default {
 
 <style scoped>
 .experience-main-block {
-  z-index: -10;
+  z-index: 1;
   padding: 200px 0 350px;
   position: relative;
   background: linear-gradient(254.72deg,rgba(255,255,255,.276) -114.85%,rgba(255,255,255,0) 69.04%),#040613;

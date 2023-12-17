@@ -73,6 +73,7 @@ export default {
 .support-main-block {
   margin-bottom: -270px;
   position: relative;
+  z-index: 5;
 }
 
 .flex-row{
