@@ -152,10 +152,6 @@ export default {
     margin-left: 50px;
   }
 
-  .container {
-    max-width: none;
-  }
-
   .nav-item {
     margin: 0 5px;
   }
