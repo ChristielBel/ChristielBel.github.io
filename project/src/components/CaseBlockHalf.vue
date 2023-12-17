@@ -96,8 +96,8 @@ export default {
 @media screen and (min-width: 768px) {
     .image-wrapper img {
         border-radius: 5px;
-        height: 125px;
-        width: auto;
+        max-width: 100%;
+        height: auto;
     }
 }
 </style>
