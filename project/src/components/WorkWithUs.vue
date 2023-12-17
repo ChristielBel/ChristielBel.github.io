@@ -117,7 +117,6 @@ export default {
 
 .swiper-container {
     width: 100%;
-    padding: 0px 0;
 }
 
 .swiper-slide {
@@ -127,12 +126,7 @@ export default {
 }
 
 .work-main-block {
-    margin-bottom: 0px;
     position: relative;
-}
-
-.flex-row {
-    margin-bottom: 75px;
 }
 
 .wwu-title {
