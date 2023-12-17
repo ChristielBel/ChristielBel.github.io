@@ -3,6 +3,7 @@ import Support from "@/components/Support.vue";
 import Service from "@/components/Service.vue"
 import TimeTasks from "@/components/TimeTasks.vue";
 import Experience from "@/components/Experience.vue";
+import Team from "@/components/Team.vue";
 import AppFooter from "@/components/AppFooter.vue";
 import AppHeader from "@/components/AppHeader.vue";
 import Slider from "@/components/Slider.vue";
@@ -10,13 +11,14 @@ import Slider from "@/components/Slider.vue";
 
 <template>
   <div class="main">
-    <AppHeader/>
-    <Service/>
-    <Support/>
-    <Experience/>
-    <TimeTasks/>
+    <AppHeader />
+    <Service />
+    <Support />
+    <Experience />
+    <TimeTasks />
+    <Team />
     <Slider/>
-    <AppFooter/>
+    <AppFooter />
   </div>
 </template>
 
