@@ -30,11 +30,11 @@ export default {
 </script>
 
 <template>
-    <div class="main-block">
+    <div class="super-main-block">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-12">
-                    <h1 class="title text-center">
+                    <h1 class="super-title text-center">
                         Последние кейсы
                     </h1>
                 </div>
@@ -51,7 +51,7 @@ export default {
 </template>
 
 <style scoped>
-.main-block {
+.super-main-block {
     margin-bottom: 0px;
     position: relative;
 }
@@ -60,7 +60,7 @@ export default {
     margin-bottom: 75px;
 }
 
-.title {
+.super-title {
     padding-top: 100px;
     margin-bottom: 20px;
     text-align: center;
