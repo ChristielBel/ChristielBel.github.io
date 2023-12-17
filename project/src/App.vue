@@ -6,6 +6,7 @@ import Experience from "@/components/Experience.vue";
 import Team from "@/components/Team.vue";
 import AppFooter from "@/components/AppFooter.vue";
 import AppHeader from "@/components/AppHeader.vue";
+import Slider from "@/components/Slider.vue";
 </script>
 
 <template>
@@ -16,6 +17,7 @@ import AppHeader from "@/components/AppHeader.vue";
     <Experience />
     <TimeTasks />
     <Team />
+    <Slider/>
     <AppFooter />
   </div>
 </template>
