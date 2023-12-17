@@ -94,9 +94,10 @@ export default {
 }
 
 @media screen and (min-width: 768px) {
-    .advantage {
-        min-height: 220px;
-        margin: 0;
+    .image-wrapper img {
+        border-radius: 5px;
+        height: 125px;
+        width: auto;
     }
 }
 </style>
