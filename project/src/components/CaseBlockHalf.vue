@@ -23,7 +23,7 @@ export default {
 </script>
 
 <template>
-    <div class="col-12 col-md-4 main-block">
+    <a href="" title="" class="col-12 col-md-4 main-block">
         <div class="advantage">
             <div class="image-wrapper">
                 <img v-bind:src="image" alt="image" class="img-responsive">
@@ -40,7 +40,7 @@ export default {
                 </div>
             </div>
         </div>
-    </div>
+    </a>
 </template>
 
 <style scoped>
@@ -48,6 +48,7 @@ export default {
     height: 360px;
     padding: 0px 10px 0px 10px;
     margin-bottom: 10px;
+    text-decoration: none;
 }
 
 .advantage {
@@ -74,6 +75,10 @@ export default {
     color: #050c33;
     line-height: 1.22;
     margin-bottom: 5px;
+}
+
+.header:hover {
+    text-decoration: underline;
 }
 
 .main-text {

@@ -19,7 +19,7 @@ export default {
 </script>
 
 <template>
-    <div class="col-12 col-md-4 main-block">
+    <a href="" class="col-12 col-md-4 main-block">
         <div :style="{ backgroundImage: 'url(' + image + ')', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }"
             class="advantage">
             <div class="overlay">
@@ -31,7 +31,7 @@ export default {
                 </div>
             </div>
         </div>
-    </div>
+    </a>
 </template>
 
 <style scoped>
@@ -39,6 +39,7 @@ export default {
     height: 360px;
     padding: 0px 10px 0px 10px;
     margin-bottom: 10px;
+    text-decoration: none;
 }
 
 .advantage {
@@ -73,5 +74,9 @@ export default {
     color: white;
     line-height: 1.22;
     margin-bottom: 5px;
+}
+
+.header:hover {
+    text-decoration: underline;
 }
 </style>
