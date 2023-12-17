@@ -22,7 +22,12 @@ export default {
     <div v-if="!!header" class="center-bg-image"></div>
     <div v-else class="background-image"></div>
     <div class="image-wrapper">
-      <img :src="image" alt="Supp" class="supp">
+      <div v-if="!!header">
+        <img :src="image" alt="Supp" class="supp dummy">
+      </div>
+      <div v-else>
+        <img :src="image" alt="Supp" class="supp">
+      </div>
     </div>
     <div v-if="!!header" class="header">
       {{header}}
