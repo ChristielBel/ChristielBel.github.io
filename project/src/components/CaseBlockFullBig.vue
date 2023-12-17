@@ -30,7 +30,7 @@ export default {
 <style scoped>
 .main-block {
     height: 360px;
-    padding: 0px 10px 0px 10px;
+    padding: 0 10px 0 10px;
     margin-bottom: 10px;
     text-decoration: none;
 }
@@ -53,11 +53,6 @@ export default {
     line-height: 1;
     position: absolute;
     bottom: 0;
-}
-
-.date {
-    font-size: 12px;
-    color: #BBB;
 }
 
 .header {

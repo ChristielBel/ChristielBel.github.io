@@ -53,8 +53,8 @@ export default {
 
 <style scoped>
 .team-main-block {
-    padding: 0px 0px 0px 0px;
-    margin-bottom: 0px;
+    padding: 0 0 0 0;
+    margin-bottom: 0;
     position: relative;
 }
 .team-title {
@@ -67,7 +67,7 @@ export default {
 }
 .team-btn {
     display: inline-block;
-    font-family: Montserrat;
+    font-family: Montserrat,serif;
     font-style: normal;
     font-weight: 500;
     font-size: 12px;

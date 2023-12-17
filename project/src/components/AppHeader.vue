@@ -92,10 +92,7 @@ video {
   right: 0;
   bottom: 0;
   left: 0;
-  background: url(../assets/images/drupal-coder1.svg);
-  background-repeat: no-repeat;
-  background-position: top left;
-  background-color: rgba(0, 0, 0, .8);
+  background: rgba(0, 0, 0, .8) url(@/assets/images/drupal-coder1.svg) no-repeat top left;
   background-size: 100%;
   z-index: -1;
 }

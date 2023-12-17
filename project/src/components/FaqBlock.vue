@@ -73,7 +73,7 @@ li {
 .advantage {
     text-align: left;
     position: relative;
-    padding: 0px 0px 0px;
+    padding: 0 0 0;
     margin: 0 10px;
 }
 

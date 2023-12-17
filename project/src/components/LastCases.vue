@@ -53,16 +53,12 @@ export default {
 
 <style scoped>
 .super-main-block {
-    margin-bottom: 0px;
+    margin-bottom: 0;
     position: relative;
 }
 
-.flex-row {
-    margin-bottom: 75px;
-}
-
 .super-title {
-    padding-top: 100px;
+    padding-top: 20px;
     margin-bottom: 20px;
     text-align: center;
     color: #050c33;

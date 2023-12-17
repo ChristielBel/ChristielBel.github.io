@@ -10,7 +10,7 @@ export default {
       option1: "переносятся на следующий месяц",
       addTime1: false,
       amount1: "6 000",
-      type2: "Бизнесс",
+      type2: "Бизнес",
       addTime2: true,
       time2: "Высокое время реакции - до 2 рабочих дней",
       option2: "не переносятся",
@@ -41,14 +41,14 @@ export default {
         <TariffBlock :type="type3" :add-time="addTime3" :time="time3" :amount="amount3" :option="option3"/>
       </div>
       <div class="row justify-content-center">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-lg-6">
           <div class="description">
            Вам не подходят наши тарифы? Оставьте заявку и мы предложим вам индивидуальные условия!
           </div>
         </div>
       </div>
       <div class="row justify-content-center">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-lg-6">
           <div class="individual-link">
             <a class="individual" href="">получить индивидуальный тариф</a>
           </div>

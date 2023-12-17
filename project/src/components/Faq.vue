@@ -74,13 +74,13 @@ export default {
 
 <style scoped>
 .support-main-block {
-    margin-bottom: 0px;
+    margin-bottom: 0;
     position: relative;
 }
 
 .flex-row {
-    padding: 0px;
-    margin-bottom: 0px;
+    padding: 0;
+    margin-bottom: 0;
 }
 
 .support-title {
@@ -93,7 +93,7 @@ export default {
 }
 
 ol {
-    padding-left: 0px;
+    padding-left: 0;
 }
 
 @media screen and (min-width: 768px) {

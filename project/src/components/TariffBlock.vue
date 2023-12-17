@@ -1,6 +1,4 @@
 <script>
-import Service from "@/App.vue";
-
 export default {
   name: "TariffBlock",
   props: {
@@ -28,7 +26,7 @@ export default {
 </script>
 
 <template>
-  <div class="col-12 col-md-4">
+  <div class="col-12 col-lg-4">
     <div class="parts-wrapper">
       <div class="header-wrapper">
         {{ type }}
@@ -111,7 +109,7 @@ export default {
   background-color: #f14d34;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1000px) {
   .parts-wrapper {
     margin-bottom: 70px;
   }

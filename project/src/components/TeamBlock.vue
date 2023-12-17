@@ -38,22 +38,20 @@ export default {
 
 <style scoped>
 .main-block {
-    margin: 0 0px;
-    padding: 0px 0px;
+    margin: 0 0;
+    padding: 0 0;
 }
 
 .advantage {
     height: 100%;
-    padding: 0px 20px;
+    padding: 0 20px;
     min-height: 300px;
 }
 
 .men {
     width: 80%; /* Или любой другой подходящий процент */
-    margin: 0 auto;
-    margin-bottom: 70px;
-    margin-bottom: 70px;
-    display: flex;
+  margin: 0 auto 70px;
+  display: flex;
     flex-direction: column;
     justify-content: center;
 }

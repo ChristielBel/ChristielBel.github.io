@@ -30,10 +30,6 @@ export default {
         <h1 class="service-title">
           Наши профессиональные разработчики выполняют быстро любые задачи
         </h1>
-        <div>Разрабатываем и оптимизируем модули, расширяем
-          <br>
-          функциональность сайтов, обновляем дизайн
-        </div>
       </div>
     </div>
     <div class="row row-flex">
@@ -47,7 +43,6 @@ export default {
 <style scoped>
 .service-title {
   padding-top: 50px;
-  margin-bottom: 20px;
   color: #050c33;
   font-weight: 700;
   font-size: 24px;

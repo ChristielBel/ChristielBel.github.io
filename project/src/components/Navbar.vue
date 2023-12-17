@@ -139,7 +139,7 @@ export default {
   width: 100%;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 768px) {
   .navbar {
     border: none;
     background: none;

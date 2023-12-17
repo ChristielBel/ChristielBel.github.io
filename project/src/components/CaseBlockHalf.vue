@@ -28,7 +28,7 @@ export default {
             <div class="image-wrapper">
                 <img v-bind:src="image" alt="image" class="img-responsive">
             </div>
-            <div class="overlay">
+            <div class="overlay justify-content-center">
                 <div class="header">
                     {{ header }}
                 </div>
@@ -58,7 +58,7 @@ export default {
 }
 
 .overlay {
-    padding: 20px 15px 15px 15px;
+    padding: 50px 50px 15px 50px;
     width: 100%;
     bottom: 0;
 }
@@ -70,7 +70,7 @@ export default {
 }
 
 .header {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
     color: #050c33;
     line-height: 1.22;
@@ -96,7 +96,7 @@ export default {
     border-radius: 5px;
     max-width: 100%;
     max-height: 200px;
-    width: auto;
+    width: 100%;
     height: auto;
 }
 
