@@ -37,7 +37,6 @@ export default {
 
 .advantage {
     border-radius: 5px;
-    box-shadow: 0 20px 40px rgba(5, 12, 51, .15);
     position: relative;
     height: 100%;
 }
@@ -71,5 +70,11 @@ export default {
 
 .header:hover {
     text-decoration: underline;
+}
+
+@media screen and (min-width: 992px) {
+    .main-block {
+        height: 475px;
+    }
 }
 </style>

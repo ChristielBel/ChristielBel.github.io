@@ -94,8 +94,10 @@ export default {
 
 .image-wrapper img {
     border-radius: 5px;
-    height: 200px;
+    max-width: 100%;
+    max-height: 200px;
     width: auto;
+    height: auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -103,6 +105,12 @@ export default {
         border-radius: 5px;
         max-width: 100%;
         height: auto;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .main-block {
+        height: 475px;
     }
 }
 </style>
