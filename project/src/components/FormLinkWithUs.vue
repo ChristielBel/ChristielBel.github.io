@@ -251,11 +251,6 @@ textarea:focus {
 }
 
 @media screen and (min-width: 1024px) {
-  form {
-    width: 420px;
-    margin-left: auto;
-  }
-
   .check {
     top: 8px
   }

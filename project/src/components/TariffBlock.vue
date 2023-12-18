@@ -21,6 +21,12 @@ export default {
       String,
       required: true
     }
+  },
+  methods: {
+    togglePopup() {
+      this.$store.dispatch('showForm');
+      this.$router.push('?form=true');
+    }
   }
 }
 </script>
@@ -41,7 +47,7 @@ export default {
         </ul>
       </div>
       <div class="button-wrapper">
-        <button class="btn contact-us">Свяжитесь с нами!</button>
+        <button @click="togglePopup" class="btn contact-us">Свяжитесь с нами!</button>
       </div>
     </div>
   </div>

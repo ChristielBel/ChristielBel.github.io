@@ -46,7 +46,9 @@ export default {
               </div>
             </div>
             <div class="col-12 col-md-6">
-              <FormLinkWithUs/>
+              <div class="form-wrapper">
+                <FormLinkWithUs/>
+              </div>
             </div>
           </div>
           <div class="row bottom-row">
@@ -190,6 +192,10 @@ export default {
 }
 
 @media screen and (min-width: 1024px) {
+  .form-wrapper {
+    margin-left: 120px;
+  }
+
   .block-header {
     font-size: 42px;
     text-align: left;
