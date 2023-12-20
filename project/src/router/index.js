@@ -1,10 +1,18 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import  Home from "../views/Home.vue"
+import Popup from "@/views/Popup.vue";
 
 const routes = [
   {
     path: '/',
-    component: Home
+    component: Home,
+    children:[
+      {
+        path:'/form',
+        component:Popup,
+        name:'form',
+      },
+    ],
   },
 ];
 

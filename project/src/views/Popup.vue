@@ -12,7 +12,7 @@ export default {
 </script>
 
 <template>
-  <div v-show="isFormVisible" class="popup-wrapper">
+  <div class="popup-wrapper">
     <div class="cover"></div>
     <FormLinkWithUs/>
   </div>

@@ -11,7 +11,7 @@ import AppFooter from "@/components/AppFooter.vue";
 import AppHeader from "@/components/AppHeader.vue";
 import Tariff from "@/components/Tariff.vue";
 import Slider from "@/components/Slider.vue";
-import Popup from "@/components/Popup.vue";
+import Popup from "@/views/Popup.vue";
 
 </script>
 
@@ -21,7 +21,7 @@ import Popup from "@/components/Popup.vue";
     <Service />
     <Support />
     <Experience />
-    <Popup/>
+    <router-view></router-view>
     <Tariff/>
     <TimeTasks />
     <Team />

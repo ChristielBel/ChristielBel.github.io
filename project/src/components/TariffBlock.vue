@@ -23,9 +23,9 @@ export default {
     }
   },
   methods: {
-    togglePopup() {
+    openModal() {
       this.$store.dispatch('showForm');
-      this.$router.push('?form=true');
+      this.$router.push({name: 'form'});
     }
   }
 }
@@ -47,7 +47,7 @@ export default {
         </ul>
       </div>
       <div class="button-wrapper">
-        <button @click="togglePopup" class="btn contact-us">Свяжитесь с нами!</button>
+          <button @click="openModal" class="btn contact-us">Свяжитесь с нами!</button>
       </div>
     </div>
   </div>
