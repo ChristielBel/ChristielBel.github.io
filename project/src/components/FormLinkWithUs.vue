@@ -8,7 +8,12 @@ export default {
       emailValue: "",
       commentValue: "",
       agreementValue: false,
-      buttonDisabled: false
+    }
+  },
+  computed: {
+    //стейт, который отвечает за блокирование кнопки и проигрывание анимации отправки
+    isButtonBlocked() {
+      return this.$store.getters.isButtonBlocked;
     }
   },
   methods: {
@@ -31,7 +36,8 @@ export default {
       let form = document.querySelector("form");
       let formData = new FormData(form);
       let responseBlock = document.getElementById("response-block");
-      this.buttonDisabled = true;
+      //изменение стейта
+      this.$store.dispatch('blockButton');
 
       fetch("https://formcarry.com/s/vTUnbIdRSE", {
         method: "POST",
@@ -53,6 +59,8 @@ export default {
               responseBlock.style.color = "red";
               responseBlock.style.display = "block";
             }
+            //возварщение в прежнее состояние
+            this.$store.dispatch('unblockButton');
           })
           .catch(error => {
             responseBlock.innerHTML = "Ошибка при отправке данных";
@@ -99,7 +107,7 @@ export default {
           персональных данных</a>.<span class="red">*</span></label>
       </div>
       <div class="m-0 p-0" id="response-block"></div>
-      <button type="submit" class="btn submit-button" :disabled="buttonDisabled">Свяжитесь с нами</button>
+      <button type="submit" class="btn submit-button" :disabled="isButtonBlocked">Свяжитесь с нами</button>
     </form>
   </div>
 </template>

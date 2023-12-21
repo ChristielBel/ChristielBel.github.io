@@ -3,11 +3,6 @@ import FormLinkWithUs from "@/components/FormLinkWithUs.vue";
 
 export default {
   components: {FormLinkWithUs},
-  computed: {
-    isFormVisible() {
-      return this.$store.getters.isFormVisible;
-    }
-  }
 };
 </script>
 

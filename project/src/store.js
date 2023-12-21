@@ -3,6 +3,7 @@ import { createStore } from 'vuex';
 export default createStore({
     state: {
         isFormVisible: false,
+        isButtonBlocked: false,
     },
     mutations: {
         showForm(state) {
@@ -10,6 +11,12 @@ export default createStore({
         },
         hideForm(state) {
             state.isFormVisible = false;
+        },
+        blockButton(state) {
+            state.isButtonBlocked = true;
+        },
+        unblockButton(state) {
+            state.isButtonBlocked = false;
         },
     },
     actions: {
@@ -19,9 +26,16 @@ export default createStore({
         hideForm({ commit }) {
             commit('hideForm');
         },
+        blockButton({ commit }) {
+            commit('showForm');
+        },
+        unblockButton({ commit }) {
+            commit('hideForm');
+        },
     },
     getters: {
         isFormVisible: (state) => state.isFormVisible,
+        isButtonBlocked: (state) => state.isButtonBlocked,
     },
 });
 

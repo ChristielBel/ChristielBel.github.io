@@ -23,7 +23,9 @@ export default {
     }
   },
   methods: {
-    openModal() {
+    openForm() {
+      //изменение стейта, при котором показывается форма и проигрывается анимация появления
+      //при закрытии формы через крестик, нужно реализовать изменение этого стейта в обратаную сторону
       this.$store.dispatch('showForm');
       this.$router.push({name: 'form'});
     }
@@ -47,7 +49,7 @@ export default {
         </ul>
       </div>
       <div class="button-wrapper">
-          <button @click="openModal" class="btn contact-us">Свяжитесь с нами!</button>
+          <button @click="openForm" class="btn contact-us">Свяжитесь с нами!</button>
       </div>
     </div>
   </div>

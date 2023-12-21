@@ -11,7 +11,6 @@ import AppFooter from "@/components/AppFooter.vue";
 import AppHeader from "@/components/AppHeader.vue";
 import Tariff from "@/components/Tariff.vue";
 import Slider from "@/components/Slider.vue";
-import Popup from "@/views/Popup.vue";
 
 </script>
 
