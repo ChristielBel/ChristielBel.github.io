@@ -27,10 +27,10 @@ export default createStore({
             commit('hideForm');
         },
         blockButton({ commit }) {
-            commit('showForm');
+            commit('blockButton');
         },
         unblockButton({ commit }) {
-            commit('hideForm');
+            commit('unblockButton');
         },
     },
     getters: {

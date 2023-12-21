@@ -3,6 +3,11 @@ import FormLinkWithUs from "@/components/FormLinkWithUs.vue";
 
 export default {
   components: {FormLinkWithUs},
+  methods: {
+    closePopup() {
+      this.$router.go(-1);
+    },
+  },
 };
 </script>
 
@@ -10,6 +15,7 @@ export default {
   <div class="popup-wrapper">
     <div class="cover"></div>
     <FormLinkWithUs/>
+    <div class="close-button" @click="closePopup">×</div>
   </div>
 </template>
 
@@ -41,11 +47,18 @@ export default {
   z-index: 15;
 }
 
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 1px 9px;
+}
+
 @media screen and (min-width: 1024px) {
   .popup-wrapper {
     width: 50%;
-    height: 80%;
-    top: 10%;
     left: 25%;
   }
 }

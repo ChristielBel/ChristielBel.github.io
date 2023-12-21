@@ -39,7 +39,7 @@ export default {
       //изменение стейта
       this.$store.dispatch('blockButton');
 
-      fetch("https://formcarry.com/s/vTUnbIdRSE", {
+      fetch("https://formcarry.com/s/vTUnbIdRS", {
         method: "POST",
         headers: {
           "Content-type": "application/json",
@@ -48,27 +48,32 @@ export default {
         body: JSON.stringify(Object.fromEntries(formData.entries()))
       })
           .then(response => {
-            if (response.status === 200) {
-              responseBlock.innerHTML = "Данные успешно отправлены";
-              responseBlock.style.color = "white";
-              responseBlock.style.display = "block";
-              localStorage.clear();
-              this.updateForm();
-            } else {
+            setTimeout(() => {
+              if (response.status === 200) {
+                responseBlock.innerHTML = "Данные успешно отправлены";
+                responseBlock.style.color = "white";
+                responseBlock.style.display = "block";
+                localStorage.clear();
+                this.updateForm();
+              } else {
+                responseBlock.innerHTML = "Ошибка при отправке данных";
+                responseBlock.style.color = "red";
+                responseBlock.style.display = "block";
+              }
+              // Возврат в прежнее состояние
+              this.$store.dispatch('unblockButton');
+            }, 1000);
+          })
+          .catch(error => {
+            setTimeout(() => {
               responseBlock.innerHTML = "Ошибка при отправке данных";
               responseBlock.style.color = "red";
               responseBlock.style.display = "block";
-            }
-            //возварщение в прежнее состояние
-            this.$store.dispatch('unblockButton');
-          })
-          .catch(error => {
-            responseBlock.innerHTML = "Ошибка при отправке данных";
-            responseBlock.style.color = "red";
-            responseBlock.style.display = "block";
-            console.log(error);
-          })
-          .finally(() => this.buttonDisabled = false);
+              console.log(error);
+              // Возврат в прежнее состояние
+              this.$store.dispatch('unblockButton');
+            }, 1000);
+          });
     },
     updateForm() {
       this.nameValue = ""
@@ -106,8 +111,11 @@ export default {
                                                                                                class="orange">обрабтку
           персональных данных</a>.<span class="red">*</span></label>
       </div>
+      <button type="submit" class="btn submit-button" :class="{ 'loading': isButtonBlocked }" :disabled="isButtonBlocked">
+        <span v-if="isButtonBlocked">&nbsp;</span>
+        <span v-else>Свяжитесь с нами</span>
+      </button>
       <div class="m-0 p-0" id="response-block"></div>
-      <button type="submit" class="btn submit-button" :disabled="isButtonBlocked">Свяжитесь с нами</button>
     </form>
   </div>
 </template>
@@ -221,6 +229,7 @@ textarea:focus {
   padding: 20px 14px;
   line-height: 1;
   transition: background .3s;
+  position: relative;
 }
 
 .submit-button:hover {
@@ -238,6 +247,29 @@ textarea:focus {
   outline: none;
 }
 
+.submit-button.loading:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid #fff;
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
+}
+
+.submit-button.loading {
+  background: #f14d34;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
 .form a {
   text-decoration: none;
   color: #f14d34;
@@ -245,11 +277,6 @@ textarea:focus {
 
 .red {
   color: red;
-}
-
-#response-block {
-  bottom: -40px;
-  position: absolute;
 }
 
 @media screen and (min-width: 768px) {
