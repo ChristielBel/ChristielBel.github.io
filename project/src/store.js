@@ -1,8 +1,9 @@
-import { createStore } from 'vuex';
+import {createStore} from 'vuex';
 
 export default createStore({
     state: {
         isFormVisible: false,
+        isAnimating: false,
         isButtonBlocked: false,
     },
     mutations: {
@@ -12,6 +13,12 @@ export default createStore({
         hideForm(state) {
             state.isFormVisible = false;
         },
+        startAnimation(state) {
+            state.isAnimating = true;
+        },
+        endAnimation(state) {
+            state.isAnimating = false;
+        },
         blockButton(state) {
             state.isButtonBlocked = true;
         },
@@ -20,22 +27,29 @@ export default createStore({
         },
     },
     actions: {
-        showForm({ commit }) {
+        showForm({commit}) {
             commit('showForm');
         },
-        hideForm({ commit }) {
+        startAnimation({commit}){
+            commit('startAnimation');
+        },
+        endAnimation({commit}){
+            commit('endAnimation');
+        },
+        hideForm({commit}) {
             commit('hideForm');
         },
-        blockButton({ commit }) {
+        blockButton({commit}) {
             commit('blockButton');
         },
-        unblockButton({ commit }) {
+        unblockButton({commit}) {
             commit('unblockButton');
         },
     },
     getters: {
         isFormVisible: (state) => state.isFormVisible,
         isButtonBlocked: (state) => state.isButtonBlocked,
+        isAnimating: state => state.isAnimating,
     },
 });
 

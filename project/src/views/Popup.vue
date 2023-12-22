@@ -1,18 +1,82 @@
 <script>
 import FormLinkWithUs from "@/components/FormLinkWithUs.vue";
+import {mapState} from 'vuex';
 
 export default {
-  components: {FormLinkWithUs},
+  components: { FormLinkWithUs },
+  computed: {
+    ...mapState(['isFormVisible', 'isAnimating']),
+  },
+  watch: {
+    isFormVisible(newValue, oldValue) {
+      if (newValue !== oldValue) {
+        this.animatePopup();
+      }
+    },
+  },
   methods: {
+    animatePopup() {
+      if (this.isFormVisible) {
+        // Анимация появления
+        this.$store.dispatch('startAnimation');
+        const startTimestamp = performance.now();
+        const duration = 500;
+
+        const animate = (timestamp) => {
+          const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+
+          // Используем кубическую кривую Безье для более плавного эффекта
+          this.$el.style.opacity = easeInOutCubic(progress);
+
+          if (progress < 1) {
+            requestAnimationFrame(animate);
+          } else {
+            this.$store.dispatch('endAnimation');
+          }
+        };
+
+        requestAnimationFrame(animate);
+      } else {
+        // Анимация исчезновения
+        this.$store.dispatch('startAnimation');
+        const startTimestamp = performance.now();
+        const duration = 500;
+
+        const animate = (timestamp) => {
+          const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+
+          // Используем кубическую кривую Безье для более плавного эффекта
+          const easedProgress = easeInOutCubic(progress);
+
+          this.$el.style.opacity = 1 - easedProgress;
+
+          if (progress < 1) {
+            requestAnimationFrame(animate);
+          } else {
+            this.$store.dispatch('endAnimation');
+            this.$router.go(-1);
+          }
+        };
+
+        requestAnimationFrame(animate);
+      }
+    },
     closePopup() {
-      this.$router.go(-1);
+      if (!this.isAnimating) {
+        this.$store.dispatch('hideForm');
+      }
     },
   },
 };
+
+// Функция кубической кривой Безье для плавного перехода
+function easeInOutCubic(t) {
+  return t < 0.5 ? 4 * t ** 3 : 1 - (-2 * t + 2) ** 3 / 2;
+}
 </script>
 
 <template>
-  <div class="popup-wrapper">
+  <div class="popup-wrapper" :class="{ 'visible': isFormVisible, 'animating': isAnimating }">
     <div class="cover"></div>
     <FormLinkWithUs/>
     <div class="close-button" @click="closePopup">×</div>
@@ -20,6 +84,19 @@ export default {
 </template>
 
 <style scoped>
+.popup-wrapper {
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.popup-wrapper.visible {
+  opacity: 1;
+}
+
+.popup-wrapper.animating {
+  pointer-events: none;
+}
+
 .cover {
   z-index: -1;
   display: block;
