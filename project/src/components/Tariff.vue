@@ -102,7 +102,6 @@ export default {
 }
 
 @media screen and (min-width: 768px) {
-
   .tariff-title {
     font-size: 42px;
   }

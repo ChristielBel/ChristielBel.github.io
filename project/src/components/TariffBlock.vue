@@ -21,12 +21,20 @@ export default {
       String,
       required: true
     }
+  },
+  methods: {
+    openForm() {
+      //изменение стейта, при котором показывается форма и проигрывается анимация появления
+      //при закрытии формы через крестик, нужно реализовать изменение этого стейта в обратаную сторону
+      this.$store.dispatch('showForm');
+      this.$router.push({ name: 'form' });
+    },
   }
 }
 </script>
 
 <template>
-  <div class="col-12 col-lg-4">
+  <div class="col-12 col-lg-4"  ref="tariffBlock">
     <div class="parts-wrapper">
       <div class="header-wrapper">
         {{ type }}
@@ -41,7 +49,7 @@ export default {
         </ul>
       </div>
       <div class="button-wrapper">
-        <button class="btn contact-us">Свяжитесь с нами!</button>
+          <button @click="openForm" class="btn contact-us">Свяжитесь с нами!</button>
       </div>
     </div>
   </div>
