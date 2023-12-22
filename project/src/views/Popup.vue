@@ -88,11 +88,7 @@ function easeInOutCubic(t) {
 }
 
 .popup-wrapper.visible {
-  opacity: 1;
-}
-
-.popup-wrapper.animating {
-  pointer-events: none;
+  opacity: 0;
 }
 
 .cover {
