@@ -39,7 +39,7 @@ export default {
       //изменение стейта
       this.$store.dispatch('blockButton');
 
-      fetch("https://formcarry.com/s/vTUnbIdRS", {
+      fetch("https://formcarry.com/s/vTUnbIdRSE", {
         method: "POST",
         headers: {
           "Content-type": "application/json",

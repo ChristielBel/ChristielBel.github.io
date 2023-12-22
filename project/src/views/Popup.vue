@@ -1,11 +1,12 @@
 <script>
 import FormLinkWithUs from "@/components/FormLinkWithUs.vue";
-import {mapState} from 'vuex';
 
 export default {
   components: {FormLinkWithUs},
   computed: {
-    ...mapState(['isFormVisible', 'isAnimating']),
+    isFormVisible() {
+      return this.$store.state.isFormVisible;
+    },
   },
   watch: {
     isFormVisible: {
@@ -22,7 +23,6 @@ export default {
     animatePopup() {
       if (this.isFormVisible) {
         // Анимация появления
-        this.$store.dispatch('startAnimation');
         const startTimestamp = performance.now();
         const duration = 500;
 
@@ -34,15 +34,12 @@ export default {
           console.log(progress);
           if (progress < 1) {
             requestAnimationFrame(animate);
-          } else {
-            this.$store.dispatch('endAnimation');
           }
         };
 
         requestAnimationFrame(animate);
       } else {
         // Анимация исчезновения
-        this.$store.dispatch('startAnimation');
         const startTimestamp = performance.now();
         const duration = 500;
 
@@ -57,7 +54,6 @@ export default {
           if (progress < 1) {
             requestAnimationFrame(animate);
           } else {
-            this.$store.dispatch('endAnimation');
             this.$router.go(-1);
           }
         };
@@ -66,9 +62,7 @@ export default {
       }
     },
     closePopup() {
-      if (!this.isAnimating) {
-        this.$store.dispatch('hideForm');
-      }
+      this.$store.dispatch('hideForm');
     },
   },
 };
@@ -80,7 +74,7 @@ function easeInOutCubic(t) {
 </script>
 
 <template>
-  <div class="popup-wrapper" :class="{ 'visible': isFormVisible, 'animating': isAnimating }">
+  <div class="popup-wrapper" :class="{ 'visible': isFormVisible}">
     <div class="cover"></div>
     <FormLinkWithUs/>
     <div class="close-button" @click="closePopup">×</div>
