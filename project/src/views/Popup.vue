@@ -24,12 +24,11 @@ export default {
       if (this.isFormVisible) {
         // Анимация появления
         const startTimestamp = performance.now();
-        const duration = 500;
+        const duration = 800;
 
         const animate = (timestamp) => {
           const progress = Math.min((timestamp - startTimestamp) / duration, 1);
 
-          // Используем кубическую кривую Безье для более плавного эффекта
           this.$el.style.opacity = easeInOutCubic(progress);
           console.log(progress);
           if (progress < 1) {
@@ -41,12 +40,11 @@ export default {
       } else {
         // Анимация исчезновения
         const startTimestamp = performance.now();
-        const duration = 500;
+        const duration = 800;
 
         const animate = (timestamp) => {
           const progress = Math.min((timestamp - startTimestamp) / duration, 1);
 
-          // Используем кубическую кривую Безье для более плавного эффекта
           const easedProgress = easeInOutCubic(progress);
           console.log(progress);
           this.$el.style.opacity = 1 - easedProgress;
@@ -67,9 +65,8 @@ export default {
   },
 };
 
-// Функция кубической кривой Безье для плавного перехода
 function easeInOutCubic(t) {
-  return t < 0.5 ? 4 * t ** 3 : 1 - (-2 * t + 2) ** 3 / 2;
+  return 1.1 * (Math.sin((t - 0.5) * Math.PI) + 1);
 }
 </script>
 
