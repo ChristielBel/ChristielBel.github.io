@@ -82,15 +82,6 @@ function easeInOutCubic(t) {
 </template>
 
 <style scoped>
-.popup-wrapper {
-  transition: opacity 0.3s ease;
-  opacity: 0;
-}
-
-.popup-wrapper.visible {
-  opacity: 0;
-}
-
 .cover {
   z-index: -1;
   display: block;
@@ -116,6 +107,12 @@ function easeInOutCubic(t) {
   left: 5%;
   padding: 20px;
   z-index: 15;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.popup-wrapper.visible {
+  opacity: 0;
 }
 
 .close-button {
