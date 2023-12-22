@@ -3,15 +3,19 @@ import FormLinkWithUs from "@/components/FormLinkWithUs.vue";
 import {mapState} from 'vuex';
 
 export default {
-  components: { FormLinkWithUs },
+  components: {FormLinkWithUs},
   computed: {
     ...mapState(['isFormVisible', 'isAnimating']),
   },
   watch: {
-    isFormVisible(newValue, oldValue) {
-      if (newValue !== oldValue) {
-        this.animatePopup();
-      }
+    isFormVisible: {
+      immediate: true,
+      handler(newValue, oldValue) {
+        console.log(newValue, oldValue);
+        if (newValue !== oldValue) {
+          this.animatePopup();
+        }
+      },
     },
   },
   methods: {
@@ -27,7 +31,7 @@ export default {
 
           // Используем кубическую кривую Безье для более плавного эффекта
           this.$el.style.opacity = easeInOutCubic(progress);
-
+          console.log(progress);
           if (progress < 1) {
             requestAnimationFrame(animate);
           } else {
@@ -47,7 +51,7 @@ export default {
 
           // Используем кубическую кривую Безье для более плавного эффекта
           const easedProgress = easeInOutCubic(progress);
-
+          console.log(progress);
           this.$el.style.opacity = 1 - easedProgress;
 
           if (progress < 1) {
@@ -101,11 +105,11 @@ function easeInOutCubic(t) {
   z-index: -1;
   display: block;
   position: fixed;
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0,0,0,0.35);
+  background: rgba(0, 0, 0, 0.35);
 }
 
 .popup-wrapper {
