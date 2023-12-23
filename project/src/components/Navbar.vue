@@ -9,22 +9,24 @@ export default {
   data: () => {
     return {
       drupal_coder,
+      // для обычных ссылок
       text1: "ПОДДЕРЖКА DRUPAL", link1: "#",
       text3: "ПРОДВИЖЕНИЕ", link3: "#",
       text4: "РЕКЛАМА", link4: "#",
       text6: "ПРОЕКТЫ", link6: "#",
       text7: "КОНТАКТЫ", link7: "#",
 
+      // для раскрывающихся
       text2: "АДМИНИСТРИРОВАНИЕ",
       link2: "#",
       dropDownTexts2: ['МИГРАЦИЯ', 'БЭКАПЫ', 'АУДИТ БЕЗОПАСНОСТИ'
         , 'ОПТИМИЗАЦИЯ СКОРОСТИ', 'ПЕРЕЕЗД НА HTTPS'],
-      dropdownLinks2: [],
+      dropdownLinks2: ['', '', '', '', ''],
 
-      text5: "B",
+      text5: "О НАС",
       link5: "#",
       dropDownTexts5: ['КОМАНДА', 'DRUPALGIVE', 'БЛОГ', 'КУРСЫ DRUPAL'],
-      dropdownLinks5: [],
+      dropdownLinks5: ['', '', '', ''],
     }
   },
 };
@@ -41,33 +43,10 @@ export default {
                 <NavbarLink :text="text1" :link="link1" />
                 <NavbarDropDownLink :text="text2" :link="link2" :dropDownTexts="dropDownTexts2"
                   :dropDownLinks="dropdownLinks2" />
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    АДМИНИСТРИРОВАНИЕ
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                    <li><a class="dropdown-item" href="#">МИГРАЦИЯ</a></li>
-                    <li><a class="dropdown-item" href="#">БЭКАПЫ</a></li>
-                    <li><a class="dropdown-item" href="#">АУДИТ БЕЗОПАСНОСТИ</a></li>
-                    <li><a class="dropdown-item" href="#">ОПТИМИЗАЦИЯ СКОРОСТИ</a></li>
-                    <li><a class="dropdown-item" href="#">ПЕРЕЕЗД НА HTTPS</a></li>
-                  </ul>
-                </li>
                 <NavbarLink :text="text3" :link="link3" />
                 <NavbarLink :text="text4" :link="link4" />
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    О НАС
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                    <li><a class="dropdown-item" href="#">КОМАНДА</a></li>
-                    <li><a class="dropdown-item" href="#">DRUPALGIVE</a></li>
-                    <li><a class="dropdown-item" href="#">БЛОГ</a></li>
-                    <li><a class="dropdown-item" href="#">КУРСЫ DRUPAL</a></li>
-                  </ul>
-                </li>
+                <NavbarDropDownLink :text="text5" :link="link5" :dropDownTexts="dropDownTexts5"
+                  :dropDownLinks="dropdownLinks5" />
                 <NavbarLink :text="text6" :link="link6" />
                 <NavbarLink :text="text7" :link="link7" />
               </ul>
