@@ -1,13 +1,17 @@
 <script>
+import NavbarLink from "@/components/NavbarLink.vue";
 import drupal_coder from "../assets/images/drupal-coder.svg"
+
 export default {
   name: "Navbar",
+  components: { NavbarLink, NavbarLink },
   data: () => {
     return {
       drupal_coder,
+      text1: "ПОДДЕРЖКА DRUPAL",
     }
   },
- };
+};
 </script>
 
 <template>
@@ -18,13 +22,10 @@ export default {
           <div class="container order-lg-1 m-0">
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
-                <li class="nav-item glowing-link">
-                  <a class="nav-link" href="#">ПОДДЕРЖКА DRUPAL</a>
-                </li>
+                <NavbarLink :text="text1" />
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
-                     data-toggle="dropdown"
-                     aria-haspopup="true" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
                     АДМИНИСТРИРОВАНИЕ
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
@@ -42,9 +43,8 @@ export default {
                   <a class="nav-link" href="#">РЕКЛАМА</a>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
-                     data-toggle="dropdown"
-                     aria-haspopup="true" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
                     О НАС
                   </a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
@@ -73,7 +73,7 @@ export default {
         </div>
         <div class="col-6 text-right">
           <button class="navbar-toggler btn" type="button" data-toggle="collapse" data-target="#navbarNav"
-                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
         </div>
@@ -87,20 +87,18 @@ export default {
   border-bottom: 1px solid #312a2a;
 }
 
-.nav-item {
-  padding: 0;
-}
 
 .navbar-toggler {
   border: none;
 }
 
-.navbar-toggler:focus, .navbar-toggler:active {
+.navbar-toggler:focus,
+.navbar-toggler:active {
   outline: none;
   box-shadow: none;
 }
 
-.navbar-dark .navbar-nav .nav-link {
+.navbar-dark .navbar-nav {
   color: white;
 }
 
@@ -167,11 +165,6 @@ export default {
   .dropdown-item:hover {
     background-color: #ab1a0e;
     color: white;
-  }
-
-  .glowing-link {
-    white-space: nowrap;
-    border-bottom: 3px #f14d34 solid;
   }
 }
 </style>
