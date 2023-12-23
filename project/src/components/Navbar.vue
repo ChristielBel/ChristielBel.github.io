@@ -1,27 +1,30 @@
 <script>
 import NavbarLink from "@/components/NavbarLink.vue";
+import NavbarDropDownLink from "@/components/NavbarDropDownLink.vue";
 import drupal_coder from "../assets/images/drupal-coder.svg"
 
 export default {
   name: "Navbar",
-  components: { NavbarLink, NavbarLink },
+  components: { NavbarLink, NavbarDropDownLink },
   data: () => {
     return {
       drupal_coder,
-      text1: "ПОДДЕРЖКА DRUPAL",
-      link1: "#",
-      text2: "",
+      text1: "ПОДДЕРЖКА DRUPAL", link1: "#",
+      text3: "ПРОДВИЖЕНИЕ", link3: "#",
+      text4: "РЕКЛАМА", link4: "#",
+      text6: "ПРОЕКТЫ", link6: "#",
+      text7: "КОНТАКТЫ", link7: "#",
+
+      text2: "АДМИНИСТРИРОВАНИЕ",
       link2: "#",
-      text3: "ПРОДВИЖЕНИЕ",
-      link3: "#",
-      text4: "РЕКЛАМА",
-      link4: "#",
-      text4: "",
-      link4: "#",
-      text5: "ПРОЕКТЫ",
+      dropDownTexts2: ['МИГРАЦИЯ', 'БЭКАПЫ', 'АУДИТ БЕЗОПАСНОСТИ'
+        , 'ОПТИМИЗАЦИЯ СКОРОСТИ', 'ПЕРЕЕЗД НА HTTPS'],
+      dropdownLinks2: [],
+
+      text5: "B",
       link5: "#",
-      text6: "КОНТАКТЫ",
-      link6: "#",
+      dropDownTexts5: ['КОМАНДА', 'DRUPALGIVE', 'БЛОГ', 'КУРСЫ DRUPAL'],
+      dropdownLinks5: [],
     }
   },
 };
@@ -36,6 +39,8 @@ export default {
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                 <NavbarLink :text="text1" :link="link1" />
+                <NavbarDropDownLink :text="text2" :link="link2" :dropDownTexts="dropDownTexts2"
+                  :dropDownLinks="dropdownLinks2" />
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
@@ -50,6 +55,7 @@ export default {
                   </ul>
                 </li>
                 <NavbarLink :text="text3" :link="link3" />
+                <NavbarLink :text="text4" :link="link4" />
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
@@ -62,8 +68,8 @@ export default {
                     <li><a class="dropdown-item" href="#">КУРСЫ DRUPAL</a></li>
                   </ul>
                 </li>
-                <NavbarLink :text="text5" :link="link5" />
                 <NavbarLink :text="text6" :link="link6" />
+                <NavbarLink :text="text7" :link="link7" />
               </ul>
             </div>
           </div>
@@ -90,7 +96,6 @@ export default {
 .navbar-nav li a {
   border-bottom: 1px solid #312a2a;
 }
-
 
 .navbar-toggler {
   border: none;
