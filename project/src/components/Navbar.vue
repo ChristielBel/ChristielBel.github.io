@@ -9,6 +9,19 @@ export default {
     return {
       drupal_coder,
       text1: "ПОДДЕРЖКА DRUPAL",
+      link1: "#",
+      text2: "",
+      link2: "#",
+      text3: "ПРОДВИЖЕНИЕ",
+      link3: "#",
+      text4: "РЕКЛАМА",
+      link4: "#",
+      text4: "",
+      link4: "#",
+      text5: "ПРОЕКТЫ",
+      link5: "#",
+      text6: "КОНТАКТЫ",
+      link6: "#",
     }
   },
 };
@@ -22,7 +35,7 @@ export default {
           <div class="container order-lg-1 m-0">
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
-                <NavbarLink :text="text1" />
+                <NavbarLink :text="text1" :link="link1" />
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
@@ -36,12 +49,7 @@ export default {
                     <li><a class="dropdown-item" href="#">ПЕРЕЕЗД НА HTTPS</a></li>
                   </ul>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">ПРОДВИЖЕНИЕ</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">РЕКЛАМА</a>
-                </li>
+                <NavbarLink :text="text3" :link="link3" />
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
@@ -54,12 +62,8 @@ export default {
                     <li><a class="dropdown-item" href="#">КУРСЫ DRUPAL</a></li>
                   </ul>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">ПРОЕКТЫ</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">КОНТАКТЫ</a>
-                </li>
+                <NavbarLink :text="text5" :link="link5" />
+                <NavbarLink :text="text6" :link="link6" />
               </ul>
             </div>
           </div>

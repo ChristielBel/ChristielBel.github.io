@@ -5,6 +5,10 @@ export default {
         text: {
             String,
             required: true
+        },
+        link: {
+            String,
+            required: true
         }
     }
 };
@@ -12,7 +16,7 @@ export default {
 
 <template>
     <li class="nav-item glowing-link">
-        <a class="nav-link" href="#">
+        <a class="nav-link" v-bind:href="link">
             <div class="text"> {{ text }}</div>
         </a>
     </li>
@@ -26,11 +30,12 @@ export default {
 
 .glowing-link {
     margin-top: 3px;
-    border-bottom: 3px transparent solid;
+    border-bottom: 3px #f14d3400 solid;
+    transition: border-color 0.3s ease;
 }
 
 .glowing-link:hover {
-    border-bottom: 3px #f14d34 solid;
+    border-bottom: 3px #f14d34FF solid;
 }
 
 .text {
