@@ -38,8 +38,8 @@ export default {
       <div class="row order-xl-1 supp-menu">
         <div class="col-12">
           <div class="container-fluid order-xl-1 m-0">
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
+            <div class="row collapse navbar-collapse" id="navbarNav">
+              <ul class="col-12 navbar-nav">
                 <NavbarLink :text="text1" :link="link1"/>
                 <NavbarDropDownLink :text="text2" :link="link2" :dropDownTexts="dropDownTexts2"
                                     :dropDownLinks="dropdownLinks2"/>
@@ -72,6 +72,10 @@ export default {
 </template>
 
 <style scoped>
+.col-12{
+  padding-right: 0;
+  padding-left: 0;
+}
 .navbar-nav li a {
   border-bottom: 1px solid #312a2a;
 }

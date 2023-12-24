@@ -52,7 +52,7 @@ export default {
       <div class="arrow-icon" :class="{ 'rotated': isArrowRotated }"></div>
     </a>
     <ul :class="{ 'open': isMobileMenuOpen, 'desktop-open': isDesktopMenuOpen }" class="list-menu drop-content dropdown-menu" aria-labelledby="navbarDropdown1">
-      <li v-for="(dropDownText, index) in dropDownTexts" :key="index">
+      <li class="lii" v-for="(dropDownText, index) in dropDownTexts" :key="index">
         <a class="list-item dropdown-item" :href="dropDownLinks[index]">{{ dropDownText }}</a>
       </li>
     </ul>
@@ -102,10 +102,6 @@ export default {
   background-color: transparent;
 }
 
-li a {
-  border-bottom: 1px solid #312a2a;
-}
-
 .list-menu {
   font-size: 12px;
   background-color: black;
@@ -126,6 +122,10 @@ li a {
 }
 
 @media screen and (max-width: 1200px){
+  .text{
+    margin-left: 40px;
+  }
+
   .arrow-icon {
     width: 10px;
     height: 10px;
@@ -144,13 +144,17 @@ li a {
     max-height: 200px;
   }
 
+  .nav-link, .lii{
+    border-bottom: 1px solid #312a2a;
+  }
+
   .list-item {
     text-decoration: none;
     display: inline-block;
     width: 100%;
-    padding: 4px 4px;
+    padding: 6px 6px;
     color: white;
-    margin-left: 5px;
+    margin-left: 50px;
     background-color: transparent;
     transition: color 0.8s ease;
   }

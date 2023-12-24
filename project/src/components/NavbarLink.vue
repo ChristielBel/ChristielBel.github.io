@@ -57,6 +57,10 @@ export default {
   .nav-item {
     border-bottom: 1px solid #312a2a;
   }
+
+  .text{
+    margin-left: 40px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
