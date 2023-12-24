@@ -24,26 +24,34 @@ export default {
   data() {
     return {
       isMobileMenuOpen: false,
-      isDesktopMenuOpen: false,
       isArrowRotated: false,
+      isDesktopMenuOpen: false,
     };
   },
   methods: {
     toggleArrowRotation() {
       this.isArrowRotated = !this.isArrowRotated;
+      this.isMobileMenuOpen = !this.isMobileMenuOpen;
+    },
+    openDropdown() {
+      this.isDesktopMenuOpen = true;
+    },
+
+    closeDropdown() {
+      this.isDesktopMenuOpen = false;
     },
   }
 };
 </script>
 
 <template>
-  <li class="nav-item dropdown">
+  <li class="nav-item dropdown" @mouseenter="openDropdown" @mouseleave="closeDropdown">
     <a class="nav-link glowing-link" v-bind:href="link" id="navbarDropdown1" role="button" data-toggle="dropdown"
        aria-haspopup="true" aria-expanded="false" @click="toggleArrowRotation">
       <div class="text drop-btn"> {{ text }}</div>
       <div class="arrow-icon" :class="{ 'rotated': isArrowRotated }"></div>
     </a>
-    <ul class="list-menu drop-content dropdown-menu" aria-labelledby="navbarDropdown1">
+    <ul :class="{ 'open': isMobileMenuOpen, 'desktop-open': isDesktopMenuOpen }" class="list-menu drop-content dropdown-menu" aria-labelledby="navbarDropdown1">
       <li v-for="(dropDownText, index) in dropDownTexts" :key="index">
         <a class="list-item dropdown-item" :href="dropDownLinks[index]">{{ dropDownText }}</a>
       </li>
@@ -53,11 +61,14 @@ export default {
 
 <style scoped>
 .drop-content {
-  display: none;
+  display: block;
+  overflow: hidden;
+  max-height: 0;
   background-color: #f1f1f1;
   min-width: 160px;
   z-index: 1;
   padding: 8px 0;
+  transition: max-height 0.8s ease;
 }
 
 .drop-content li {
@@ -129,6 +140,10 @@ li a {
     transform: rotate(90deg);
   }
 
+  .drop-content.open {
+    max-height: 200px;
+  }
+
   .list-item {
     text-decoration: none;
     display: inline-block;
@@ -137,7 +152,7 @@ li a {
     color: white;
     margin-left: 5px;
     background-color: transparent;
-    transition: color 0.3s ease;
+    transition: color 0.8s ease;
   }
 
   .list-item:hover {
@@ -154,6 +169,11 @@ li a {
 @media screen and (min-width: 1200px) {
   .dropdown:hover .drop-content {
     position: absolute;
+  }
+
+  .dropdown:hover .drop-content,
+  .desktop-open .drop-content {
+    max-height: 200px;
   }
 
   .dropdown {
