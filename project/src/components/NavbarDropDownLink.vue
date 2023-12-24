@@ -24,13 +24,14 @@ export default {
   data() {
     return {
       isMobileMenuOpen: false,
-      isDesktopMenuOpen: false
+      isDesktopMenuOpen: false,
+      isArrowRotated: false,
     };
   },
   methods: {
-    toggleMobileMenu() {
-      this.isMobileMenuOpen = !this.isMobileMenuOpen;
-    }
+    toggleArrowRotation() {
+      this.isArrowRotated = !this.isArrowRotated;
+    },
   }
 };
 </script>
@@ -38,8 +39,9 @@ export default {
 <template>
   <li class="nav-item dropdown">
     <a class="nav-link glowing-link" v-bind:href="link" id="navbarDropdown1" role="button" data-toggle="dropdown"
-       aria-haspopup="true" aria-expanded="false">
+       aria-haspopup="true" aria-expanded="false" @click="toggleArrowRotation">
       <div class="text drop-btn"> {{ text }}</div>
+      <div class="arrow-icon" :class="{ 'rotated': isArrowRotated }"></div>
     </a>
     <ul class="list-menu drop-content dropdown-menu" aria-labelledby="navbarDropdown1">
       <li v-for="(dropDownText, index) in dropDownTexts" :key="index">
@@ -72,6 +74,7 @@ export default {
 
 .text {
   color: white;
+  margin-right: 5px;
 }
 
 .text:hover {
@@ -100,12 +103,25 @@ li a {
   color: #f14d34;
 }
 
-.nav-item {
-  display: block;
-  background-image: url("@/assets/images/caret-up-fill.svg");
-  background-repeat: no-repeat;
-  background-position:  ;
-  transition: transform 0.5s ease;
+.nav-link {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 1000px){
+  .arrow-icon {
+    width: 10px;
+    height: 10px;
+    background-image: url("@/assets/images/arrow-menu.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 5px;
+    transition: transform 0.5s ease;
+  }
+
+  .rotated {
+    transform: rotate(90deg);
+  }
 }
 
 @media screen and (min-width: 1000px) {
@@ -115,6 +131,22 @@ li a {
 
   .dropdown {
     border-bottom: none;
+  }
+
+  .nav-link:after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-image: url("@/assets/images/arrow-menu.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 5px;
+    transition: transform 0.5s ease;
+  }
+
+  .nav-link:hover:after {
+    transform: rotate(90deg);
   }
 
   .dropdown:hover .drop-content {
