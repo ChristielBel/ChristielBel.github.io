@@ -73,12 +73,22 @@ export default {
 }
 
 .text {
-  color: white;
+  text-decoration: none;
+  display: inline-block;
   margin-right: 5px;
+  color: white;
+  background-color: transparent;
+  transition: color 0.3s ease;
 }
 
 .text:hover {
   color: #f14d34;
+  background-color: transparent;
+}
+
+.text:active {
+  color: #ab1a0e;
+  background-color: transparent;
 }
 
 li a {
@@ -99,10 +109,6 @@ li a {
   color: white;
 }
 
-.list-item:hover {
-  color: #f14d34;
-}
-
 .nav-link {
   display: flex;
   align-items: center;
@@ -121,6 +127,27 @@ li a {
 
   .rotated {
     transform: rotate(90deg);
+  }
+
+  .list-item {
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    padding: 4px 4px;
+    color: white;
+    margin-left: 5px;
+    background-color: transparent;
+    transition: color 0.3s ease;
+  }
+
+  .list-item:hover {
+    color: #f14d34;
+    background-color: transparent;
+  }
+
+  .list-item:active {
+    color: #ab1a0e;
+    background-color: transparent;
   }
 }
 

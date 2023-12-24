@@ -5,7 +5,7 @@ import drupal_coder from "../assets/images/drupal-coder.svg"
 
 export default {
   name: "Navbar",
-  components: { NavbarLink, NavbarDropDownLink },
+  components: {NavbarLink, NavbarDropDownLink},
   data: () => {
     return {
       drupal_coder,
@@ -40,15 +40,15 @@ export default {
           <div class="container-fluid order-lg-1 m-0">
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
-                <NavbarLink :text="text1" :link="link1" />
+                <NavbarLink :text="text1" :link="link1"/>
                 <NavbarDropDownLink :text="text2" :link="link2" :dropDownTexts="dropDownTexts2"
-                  :dropDownLinks="dropdownLinks2" />
-                <NavbarLink :text="text3" :link="link3" />
-                <NavbarLink :text="text4" :link="link4" />
+                                    :dropDownLinks="dropdownLinks2"/>
+                <NavbarLink :text="text3" :link="link3"/>
+                <NavbarLink :text="text4" :link="link4"/>
                 <NavbarDropDownLink :text="text5" :link="link5" :dropDownTexts="dropDownTexts5"
-                  :dropDownLinks="dropdownLinks5" />
-                <NavbarLink :text="text6" :link="link6" />
-                <NavbarLink :text="text7" :link="link7" />
+                                    :dropDownLinks="dropdownLinks5"/>
+                <NavbarLink :text="text6" :link="link6"/>
+                <NavbarLink :text="text7" :link="link7"/>
               </ul>
             </div>
           </div>
@@ -62,7 +62,7 @@ export default {
         </div>
         <div class="col-6 text-right">
           <button class="navbar-toggler btn" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
         </div>
@@ -90,17 +90,6 @@ export default {
   color: white;
 }
 
-.dropdown-menu {
-  font-size: 12px;
-  background-color: black;
-  border-radius: 0;
-}
-
-.dropdown-item {
-  padding: 8px 20px;
-  color: white;
-}
-
 .navbar {
   z-index: 20;
   font-weight: 500;
@@ -117,12 +106,14 @@ export default {
   height: 31px;
 }
 
-.supp-menu {
-  width: 105%;
-}
+@media screen and (max-width: 1000px){
+  .supp-menu {
+    width: 105%;
+  }
 
-.supp-logo {
-  width: 105%;
+  .supp-logo {
+    width: 105%;
+  }
 }
 
 @media screen and (min-width: 1000px) {
@@ -138,21 +129,8 @@ export default {
     margin-left: 50px;
   }
 
-  .nav-item {
-    margin: 0 5px;
-  }
-
   .navbar-nav li a {
     border: none;
-  }
-
-  .dropdown-menu {
-    background-color: #f14d34;
-  }
-
-  .dropdown-item:hover {
-    background-color: #ab1a0e;
-    color: white;
   }
 }
 </style>
