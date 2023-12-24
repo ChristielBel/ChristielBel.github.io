@@ -37,29 +37,28 @@ export default {
 </template>
 
 <style scoped>
-.nav-item {
-    white-space: nowrap;
-    padding: 0;
-}
-
 .glowing-link {
     margin-top: 3px;
     border-bottom: 3px #f14d3400 solid;
     transition: border-color 0.3s ease;
 }
 
-.glowing-link:hover {
-    border-bottom: 3px #f14d34FF solid;
+.nav-item {
+    white-space: nowrap;
+    padding: 0;
 }
 
 .text {
     color: white;
 }
 
+.text:hover {
+    color: #f14d34;
+}
+
 .navbar-nav li a {
     border-bottom: 1px solid #312a2a;
 }
-
 
 .navbar-toggler:focus,
 .navbar-toggler:active {
@@ -100,6 +99,16 @@ export default {
 
 
 @media screen and (min-width: 1000px) {
+
+
+    .glowing-link:hover {
+        border-bottom: 3px #f14d34FF solid;
+    }
+
+    .text:hover {
+        color: white;
+    }
+
     .navbar {
         border: none;
         background: none;

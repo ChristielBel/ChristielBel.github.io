@@ -34,11 +34,23 @@ export default {
     transition: border-color 0.3s ease;
 }
 
-.glowing-link:hover {
-    border-bottom: 3px #f14d34FF solid;
-}
-
 .text {
     color: white;
+}
+
+.text:hover {
+    color: #f14d34;
+}
+
+@media screen and (min-width: 1000px) {
+
+    .glowing-link:hover {
+        border-bottom: 3px #f14d34FF solid;
+    }
+
+    .text:hover {
+        color: white;
+    }
+
 }
 </style>
