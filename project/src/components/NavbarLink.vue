@@ -41,6 +41,12 @@ export default {
     color: #f14d34;
 }
 
+@media screen and (max-width: 1000px){
+    .nav-item{
+        border-bottom: 1px solid #312a2a;
+    }
+}
+
 @media screen and (min-width: 1000px) {
 
     .glowing-link:hover {
