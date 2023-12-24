@@ -114,7 +114,7 @@ li a {
   align-items: center;
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1200px){
   .arrow-icon {
     width: 10px;
     height: 10px;
@@ -151,7 +151,7 @@ li a {
   }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1200px) {
   .dropdown:hover .drop-content {
     position: absolute;
   }

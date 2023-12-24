@@ -53,13 +53,13 @@ export default {
   background-color: transparent;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   .nav-item {
     border-bottom: 1px solid #312a2a;
   }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1200px) {
   .glowing-link:hover {
     border-bottom: 3px #f14d34FF solid;
   }

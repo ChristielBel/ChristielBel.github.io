@@ -33,11 +33,11 @@ export default {
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark mx-0 px-0">
+  <nav class="navbar navbar-expand-xl navbar-dark mx-0 px-0">
     <div class="container-fluid justify-content-center">
-      <div class="row order-lg-1 supp-menu">
+      <div class="row order-xl-1 supp-menu">
         <div class="col-12">
-          <div class="container-fluid order-lg-1 m-0">
+          <div class="container-fluid order-xl-1 m-0">
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                 <NavbarLink :text="text1" :link="link1"/>
@@ -106,7 +106,7 @@ export default {
   height: 31px;
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1200px){
   .supp-menu {
     width: 105%;
   }
@@ -116,7 +116,7 @@ export default {
   }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1200px) {
   .navbar {
     border: none;
     background: none;
