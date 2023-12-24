@@ -1,4 +1,8 @@
+
+import { withDirectives } from 'vue';
+
 <script>
+import $ from 'jquery'
 export default {
     name: "NavbarDropDownLink",
     props: {
@@ -18,27 +22,86 @@ export default {
             Array,
             requared: true
         }
+    },
+    data() {
+        return {
+            isMobileMenuOpen: false,
+            isDesktopMenuOpen: false
+        };
+    },
+    methods: {
+        toggleMobileMenu() {
+            this.isMobileMenuOpen = !this.isMobileMenuOpen;
+        }
     }
 };
 </script>
 
 <template>
-    <li class="nav-item glowing-link dropdown">
-        <a class="nav-link " v-bind:href="link" id="navbarDropdown1" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            <div class="text dropdown-toggle"> {{ text }}</div>
+    <li class="nav-item dropdown">
+        <a @click="toggleMobileMenu" class="menu-button nav-link glowing-link" v-bind:href="link">
+            <div class="text"> {{ text }}</div>
         </a>
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+        <ul v-if="isMobileMenuOpen" class="mobile-menu list-menu drop-content">
             <li v-for="(dropDownText, index) in dropDownTexts" :key="index">
-                <a class="dropdown-item" :href="dropDownLinks[index]">{{ dropDownText }}</a>
+                <a class="list-item" :href="dropDownLinks[index]">{{ dropDownText }}</a>
+            </li>
+        </ul>
+    </li>
+    <li class="nav-item dropdown">
+        <a class="nav-link glowing-link" v-bind:href="link" id="navbarDropdown1" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <div class="text drop-btn"> {{ text }}</div>
+        </a>
+        <ul class="list-menu drop-content" aria-labelledby="navbarDropdown1">
+            <li v-for="(dropDownText, index) in dropDownTexts" :key="index">
+                <a class="list-item" :href="dropDownLinks[index]">{{ dropDownText }}</a>
             </li>
         </ul>
     </li>
 </template>
 
 <style scoped>
+.mobile-menu,
+.desktop-menu {
+    display: none;
+    padding: 0px;
+}
+
+.menu-button:hover+.desktop-menu,
+.desktop-menu:hover {
+    display: block;
+}
+
+.drop-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.drop-content {
+    display: none;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    z-index: 1;
+    padding: 8px 0px;
+}
+
+.drop-content li {
+    color: black;
+    padding: 2px 0px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .drop-content {
+    display: block;
+}
+
+.dropdown:hover .drop-btn {
+    background-color: #3e8e41;
+}
+
 .glowing-link {
-    margin-top: 3px;
     border-bottom: 3px #f14d3400 solid;
     transition: border-color 0.3s ease;
 }
@@ -70,14 +133,14 @@ export default {
     color: white;
 }
 
-.dropdown-menu {
+.list-menu {
     font-size: 12px;
     background-color: black;
     border-radius: 0;
 }
 
-.dropdown-item {
-    padding: 8px 20px;
+.list-item {
+    padding: 4px 4px;
     color: white;
 }
 
@@ -99,7 +162,9 @@ export default {
 
 
 @media screen and (min-width: 1000px) {
-
+    .dropdown:hover .drop-content {
+        position: absolute;
+    }
 
     .glowing-link:hover {
         border-bottom: 3px #f14d34FF solid;
@@ -129,11 +194,11 @@ export default {
         border: none;
     }
 
-    .dropdown-menu {
+    .list-menu {
         background-color: #f14d34;
     }
 
-    .dropdown-item:hover {
+    .list-item:hover {
         background-color: #ab1a0e;
         color: white;
     }

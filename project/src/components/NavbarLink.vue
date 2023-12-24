@@ -15,8 +15,8 @@ export default {
 </script>
 
 <template>
-    <li class="nav-item glowing-link">
-        <a class="nav-link" v-bind:href="link">
+    <li class="nav-item">
+        <a class="nav-link glowing-link" v-bind:href="link">
             <div class="text"> {{ text }}</div>
         </a>
     </li>
@@ -29,7 +29,6 @@ export default {
 }
 
 .glowing-link {
-    margin-top: 3px;
     border-bottom: 3px #f14d3400 solid;
     transition: border-color 0.3s ease;
 }

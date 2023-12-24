@@ -34,10 +34,10 @@ export default {
 
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark mx-0 px-0">
-    <div class="container justify-content-center">
+    <div class="container-fluid justify-content-center">
       <div class="row order-lg-1 supp-menu">
         <div class="col-12">
-          <div class="container order-lg-1 m-0">
+          <div class="container-fluid order-lg-1 m-0">
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                 <NavbarLink :text="text1" :link="link1" />
@@ -118,11 +118,11 @@ export default {
 }
 
 .supp-menu {
-  width: 100%;
+  width: 105%;
 }
 
 .supp-logo {
-  width: 100%;
+  width: 105%;
 }
 
 @media screen and (min-width: 1000px) {
